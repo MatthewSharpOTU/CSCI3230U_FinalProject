@@ -1,0 +1,39 @@
+#email{
+    margin-left: 900px;
+    margin-right:200px;
+    margin-top: 300px;
+    width: 400px;
+}
+
+#username{
+    margin-left: 900px;
+    margin-right:200px;
+    margin-top: 15px;
+    width: 400px;
+}
+
+#password{
+    margin-left: 900px;
+    margin-right:200px;
+    margin-top: 15px;
+    width:400px;
+}
+
+#createAccount{
+    margin-left: 1025px;
+    margin-right:200px;
+    margin-top: 50px;
+}
+
+#signIn{
+    margin-left: 1052px;
+    margin-right:200px;
+    margin-top: 130px;
+}
+
+body,
+html {
+    background-image: url('Images/defaultBG.png');
+    background-repeat: repeat-y;
+    background-size: 50%; 
+}

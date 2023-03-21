@@ -1,0 +1,40 @@
+#username{
+    margin-left: 900px;
+    margin-right:200px;
+    margin-top: 300px;
+    width: 400px;
+}
+
+#password{
+    margin-left: 900px;
+    margin-right:200px;
+    margin-top: 15px;
+    width:400px;
+}
+
+#error{
+    margin-left: 950px;
+    margin-right:200px;
+    margin-top: 15px;
+    width:400px;
+    visibility: hidden;
+}
+
+#signUp{
+    margin-left: 1050px;
+    margin-right:200px;
+    margin-top: 150px;
+}
+#signIn{
+    margin-left: 1052px;
+    margin-right:200px;
+    margin-top: 50px;
+}
+
+
+body,
+html {
+    background-image: url('Images/defaultBG.png');
+    background-repeat: repeat-y;
+    background-size: 50%; 
+}
