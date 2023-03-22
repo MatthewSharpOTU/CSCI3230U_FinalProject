@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave - Sign Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="Styling/signUp.css">
+   
+    <!-- reference your source code here -->
+</head>
+<body>
+    <div class="control">
+        <input id="email" name="email" class="input is-link" type="text" required placeholder="Email">
+    </div>
+
+    <div>
+        <p id="emailTaken"class="help is-danger">Email is already in use. Please use a different one</p>
+    </div>
+
+    <div class="control">
+        <input id="username" name="username" class="input is-link" type="text" required placeholder="Username">
+    </div>
+
+    <div>
+        <p id="userTaken"class="help is-danger">Username is already taken. Please use a different one</p>
+    </div>
+
+    <div class="control">
+        <input id="password" name="password" class="input is-link" type="text" required placeholder="Password">
+    </div>
+
+    <div>
+        <p id="emptyPassword"class="help is-danger">No password entered, or password is under 8 characters</p>
+    </div>
+
+    <div>
+        <p id="available"class="help is-success">Account is ready to be created!</p>
+    </div>
+
+    <div class="control" id="createAccount">
+        <input onclick="getNewUser()" type="submit" value="Create Account" class="button is-link is-light is-rounded"></button>
+    </div>
+
+    <div class="control" id="signIn">
+        <input onclick="window.location.href = 'signIn.html';" type="submit" value="Sign In"class="button is-link is-light is-rounded"></button>
+    </div>
+</body>
+<script src="Scripts/signUp.js"></script>
+</html>
