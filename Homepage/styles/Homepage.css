@@ -1,3 +1,47 @@
-body {
-    background: rgba(0, 128, 0, 0.3)
+body{
+    background-color: plum;
+}
+
+
+
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    top: 80px;
+    left: 16px;
+  }
+
+  .btn {
+    cursor: pointer;
+    border: 5px solid purple;
+    background-color: transparent;
+    height: 50px;
+    width: 200px;
+    color: #6fbcf0;
+    font-size: 1.5em;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero.has-background {
+    position: relative;
+    overflow: hidden;
+}
+  
+.hero-background {
+    position: absolute;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+}
+  
+.hero-background.is-transparent {
+    opacity: 0.3;
 }

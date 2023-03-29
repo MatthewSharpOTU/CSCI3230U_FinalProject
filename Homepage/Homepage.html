@@ -15,15 +15,15 @@
 </head>
 <body>
 
-    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+    <nav class="navbar navbar-light" style="background-color: pink;" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             
             <svg height="50" width="50">
                 <circle cx="25" cy="25" r="10" stroke="black" stroke-width="3" fill="rgba(198, 45, 205, 0.8)" />
             </svg> 
-            <a class="navbar-item" href="..\Profile\Profile.html">
-                Wave Profile
-            </a>
+            
+
+            <a class="navbar-item">Welcome to Wave</a>
 
             <div class="navbar-burger" data-target="navbarExampleTransparentExample">
                 <span></span>
@@ -34,6 +34,10 @@
 
         <div class="navbar-menu" id="navbarExampleTransparentExample"> 
             <div class="navbar-start">
+
+                <a class="navbar-item" href="..\Profile\Profile.html">
+                    Profile
+                </a>
 
                 <a class="navbar-item" href="Homepage.html">
                     Home
@@ -54,5 +58,19 @@
             </div>
         </div>
     </nav>
+
+    <div class="hero is-fullheight has-background">
+        <img class="hero-background is-transparent" src="styles/cloudy_sky.jpg" />
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Hero Image
+            </h1>
+            <h3 class="subtitle">
+              without CSS background-image
+            </h3>
+          </div>
+        </div>
+      </div>
 
 </body>
