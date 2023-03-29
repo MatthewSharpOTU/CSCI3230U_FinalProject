@@ -7,18 +7,54 @@ body{
 /* Container holding the image and the text */
 .container {
     position: relative;
+    display: block;
     text-align: center;
     color: white;
-  }
+}
   
-  /* Bottom left text */
-  .bottom-left {
+#top-left {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 80px;
-    left: 16px;
-  }
+    top: 20%;
+    left: 10%;
+    width: 300px;
+    height: 50px;
+    font-size: large;
+    font-weight: 500;
+}
 
-  .btn {
+#top-right {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 300px;
+    height: 50px;
+    font-size: large;
+    font-weight: 500;
+}
+
+#bottom-left {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    width: 300px;
+    height: 50px;
+    font-size: large;
+    font-weight: 500;
+}
+
+#bottom-right {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    width: 300px;
+    height: 50px;
+    font-size: large;
+    font-weight: 500;
+}
+
+.btn {
     cursor: pointer;
     border: 5px solid purple;
     background-color: transparent;
