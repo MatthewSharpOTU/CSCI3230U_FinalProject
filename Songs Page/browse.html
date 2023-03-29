@@ -6,12 +6,10 @@
     <title>Wave</title>
     <!-- reference your stylesheet here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="styles/Homepage.css">
     <!-- reference your source code here -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
       integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src = "scripts/homepage.js" defer></script>
 </head>
 <body>
 
@@ -25,25 +23,25 @@
 
             <a class="navbar-item">Welcome to Wave</a>
 
-            <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+            <div class="navbar-burger" data-target="navbarExampleTransparent">
                 <span></span>
                 <span></span>
                 <span></span>
             </div> 
         </div>
 
-        <div class="navbar-menu" id="navbarExampleTransparentExample"> 
+        <div class="navbar-menu" id="navbarExampleTransparent"> 
             <div class="navbar-start">
 
                 <a class="navbar-item" href="..\Profile\Profile.html">
                     Profile
                 </a>
 
-                <a class="navbar-item" href="Homepage.html">
+                <a class="navbar-item" href="..\Homepage\Homepage.html">
                     Home
                 </a>
 
-                <a class="navbar-item" href = "..\Songs Page\browse.html">
+                <a class="navbar-item" href = "browse.html">
                     Browse Songs
                 </a>
 
@@ -58,23 +56,4 @@
             </div>
         </div>
     </nav>
-
-    <div class="hero is-fullheight has-background">
-        <img class="hero-background is-transparent" src="images/cloudy_sky.jpg" />
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">
-              You Are Now Listening To Wave
-            </h1>
-            <h3 class="subtitle">
-              Listen - Connect - Learn
-            </h3>
-          </div>
-          <button class="button is-danger is-rounded" id="top-left">Test Your Knowledge</button>
-          <button class="button is-danger is-rounded" id="top-right">Listen Now</button>
-          <button class="button is-danger is-rounded" id="bottom-left">Discover Your Sounds</button>
-          <button class="button is-danger is-rounded" id="bottom-right">Customize Your Profile</button>
-        </div>
-      </div>
-
 </body>
