@@ -1,22 +1,69 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Profile</title>
-	<link rel="stylesheet" href="styles/Profile.css"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="scripts/Profile.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.1/d3.min.js" integrity="sha512-EJphfO0pq9xyT3qaHte1zam2S9a1PZ76oHBjayziMT+2lw/Y0NhkSVHS2rfl3t4UX/eyq/D6f9d2sjA6K9t/Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="scripts/chart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles/Profile.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="scripts/Profile.js"></script>
   </head>
   <body>
+    
     <div class="container">
+      <img src="images/logo-1.png" class="logo">
+      <img src="images/home.png" class="home-icon">
+      <img src="images/menu.png" class="menu-icon">
+      <img src="images/message.png" class="message-icon">
+      <img src="images/back.png" class="back-icon">
       <div class="profile-box">
-        <img src="images/menu.png" class="menu-icon">
-        <img src="images/home.png" class="menu-icon">
-        <img src="images/menu.png" class="menu-icon">
+        <div class="header">
+          <img src="images/points.png" class="points-icon">
+          <h2>500</h2>
+        </div>
+        <div class="intro">
+          <h2>Joe Biden</h2>        
+          <img src="images/profile.png" class="profile-icon">
+          <h2>Metal Head</h2>
+        </div>
+        <div class="description">
+          <div class="trivia-rankings">
+            <h2>Trivia Rankings</h2>
+            <ol>
+              <li>Rock</li>
+              <li>Pop</li>
+              <li>R&B</li>
+              <li>Alternative</li>
+              <li>Rap</li>
+            </ol>
+          </div>
+          <div class="fanatic-score">
+            <h2>Fanatic Score</h2>
+            <ol>
+              <li>Van Halen</li>
+              <li>Sammy Hagar</li>
+              <li>Taylor Swift</li>
+              <li>Drake</li>
+              <li>Daft Punk</li>
+            </ol>
+          </div> 
+        </div>
+        <h2 class="bio-header">About Joe</h2>
+        <div class="profile-bio">
+          <p>Hello World!</p>
+        </div> 
       </div>
-
+      <div class="music-player">
+        <audio id="audio-player" src="your-audio-file.mp3"></audio>
+        <div class="controls">
+          <button id="back-button">&#x21A9;</button>
+          <button id="play-button">&#x25B6;</button>
+          <button id="pause-button">&#x23F8;</button>
+          <button id="forward-button">&#x21AA;</button>
+        </div>
+        <div class="progress-bar">
+          <div id="progress"></div>
+        </div>
+      </div>
     </div>
-
   </body>
 </html>
