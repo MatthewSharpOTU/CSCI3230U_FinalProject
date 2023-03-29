@@ -1,12 +1,19 @@
 //global variables
+const {MongoClient} = require('mongodb');
+const uri = "mongodb+srv://wave:Password@wave-accounts.kvwuqek.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri);
 var curUser;
 var userFree=false;
 var emailFree=false;
+var username;
+var password;
+var email;
+var accountFound = false;
 
 function getNewUser(){
-    var username = document.querySelector('#username').value;
-    var password = document.querySelector('#password').value;
-    var email = document.querySelector('#email').value;
+    username = document.querySelector('#username').value;
+    password = document.querySelector('#password').value;
+    email = document.querySelector('#email').value;
 
     console.log(username);
     console.log(password.length);
