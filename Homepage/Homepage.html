@@ -11,6 +11,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
       integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.1/d3.min.js" 
+        integrity="sha512-EJphfO0pq9xyT3qaHte1zam2S9a1PZ76oHBjayziMT+2lw/Y0NhkSVHS2rfl3t4UX/eyq/D6f9d2sjA6K9t/Kg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src = "scripts/homepage.js" defer></script>
 </head>
 <body>
@@ -23,7 +26,7 @@
             </svg> 
             
 
-            <a class="navbar-item">Welcome to Wave</a>
+            <!-- <a class="navbar-item">Welcome to Wave</a> -->
 
             <div class="navbar-burger" data-target="navbarExampleTransparentExample">
                 <span></span>
@@ -35,7 +38,7 @@
         <div class="navbar-menu" id="navbarExampleTransparentExample"> 
             <div class="navbar-start">
 
-                <a class="navbar-item" href="..\Profile\Profile.html">
+                <a class="navbar-item" href="../Profile/Profile.html">
                     Profile
                 </a>
 
@@ -43,7 +46,7 @@
                     Home
                 </a>
 
-                <a class="navbar-item" href = "..\Songs Page\browse.html">
+                <a class="navbar-item" href = "../Songs Page/browse.html">
                     Browse Songs
                 </a>
 
@@ -51,7 +54,7 @@
                     Playlists
                 </a>
                 
-                <a class="navbar-item" href="..\Trivia\trivia.html">
+                <a class="navbar-item" href="../Trivia/trivia.html">
                     Trivia
                 </a>
 
@@ -62,19 +65,24 @@
     <div class="hero is-fullheight has-background">
         <img class="hero-background is-transparent" src="images/cloudy_sky.jpg" />
         <div class="hero-body">
-          <div class="container">
-            <h1 class="title">
-              You Are Now Listening To Wave
-            </h1>
-            <h3 class="subtitle">
-              Listen - Connect - Learn
-            </h3>
-          </div>
+            <div class="container">
+                <svg id="top-line" height="300" width="1000"></svg>
+                <div class="title">
+                    You Are Now Listening To Wave
+                 </div>
+                <div class="subtitle">
+                    Listen - Connect - Learn
+                </div>
+            </div>
           <button class="button is-danger is-rounded" id="top-left">Test Your Knowledge</button>
-          <button class="button is-danger is-rounded" id="top-right">Listen Now</button>
+          <button class="button is-danger is-rounded" id="top-mid-left">Listen Now</button>
           <button class="button is-danger is-rounded" id="bottom-left">Discover Your Sounds</button>
-          <button class="button is-danger is-rounded" id="bottom-right">Customize Your Profile</button>
+          <button class="button is-danger is-rounded" id="bottom-mid-left">Customize Your Profile</button>
         </div>
-      </div>
+    </div>
+
+    
+
+      
 
 </body>
