@@ -102,7 +102,7 @@ body{
 #top-line {
     stroke:rgb(238, 222, 129); 
     stroke-width:5;
-    top: 100px;
+    width: 1000px;
 }
 
 /* @keyframes mymove {
@@ -166,7 +166,7 @@ body{
     }
 }
 
-@media (width <= 960px) {
+@media (width < 960px) {
     #bottom-mid-left {
         position: absolute;
         top: 650px;
