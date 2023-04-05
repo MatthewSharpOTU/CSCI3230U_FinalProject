@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     <link rel="stylesheet" href="styles/Profile.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="scripts/Profile.js"></script>
+    <script type="text/javascript" src="scripts/spreadsheet.js"></script>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
   </head>
   <body>
-    
+    <audio id="audio-player" src=""></audio>
     <div class="container">
       <img src="images/logo-1.png" class="logo">
-      <img src="images/home.png" class="home-icon">
+      <img src="images/home.png" class="home-icon" id="home-icon">
+
       <img src="images/menu.png" class="menu-icon">
+        <div class="bar"></div>
       <img src="images/message.png" class="message-icon">
       <img src="images/back.png" class="back-icon">
       <div class="profile-box">
@@ -53,17 +63,50 @@
         </div> 
       </div>
       <div class="music-player">
-        <audio id="audio-player" src="your-audio-file.mp3"></audio>
-        <div class="controls">
-          <button id="back-button">&#x21A9;</button>
-          <button id="play-button">&#x25B6;</button>
-          <button id="pause-button">&#x23F8;</button>
-          <button id="forward-button">&#x21AA;</button>
+        <div class="song-bar">
+          <div class="song-info">
+            <div class="song-image">
+            </div>
+            <div class="song-description">
+              <p class="title">God's Plan</p>
+              <p class="artist">Drake</p>
+            </div>
+          </div>
+          <div class="icons">
+            <i class="far fa-heart"></i>
+      
+          </div>
         </div>
-        <div class="progress-bar">
-          <div id="progress"></div>
+        <div class="progress-controller">
+          <div class="controls">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward" id="backward-button"></i>
+            <i class="play-pause fas fa-play" id="play-button">
+              <span></span>
+              <span></span>
+            </i>
+            <i class="fas fa-step-forward" id="forward-button"></i>
+            <i class="fas fa-undo-alt"></i>
+          </div>
+          <div class="progress-container">
+            <span class="current-time">00:00</span>
+            <div class="progress-bar">
+              <div class="progress" id="progress"></div>
+            </div>
+            <span class="song-duration">00:00</span>
+          </div>
+        </div>
+        <div class="other-features">
+          <i class="fas fa-list-ul"></i>
+          <div class="volume-bar">
+            <i class="fas fa-volume-down"></i>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    <script src="data.js"></script>
+    <script src="scripts/Profile.js"></script>
   </body>
 </html>
