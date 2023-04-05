@@ -1,0 +1,45 @@
+#logo{
+    float: right;
+    background-image: url("Images/logo_2.png");
+    margin-right: 19%;
+    width: 300px;
+    height: 300px;
+}
+
+#username{
+    margin-left: 58.5%;
+    width: 400px;
+}
+
+#password{
+    margin-left: 58.5%;
+    margin-top: 15px;
+    width:400px;
+}
+
+#error{
+    margin-left: 59%;
+    margin-right:200px;
+    margin-top: 15px;
+    width:400px;
+    visibility: hidden;
+}
+
+#signUp{
+    margin-left: 68%;
+    margin-right:200px;
+    margin-top: 150px;
+}
+#signIn{
+    margin-left: 68%;
+    margin-right:200px;
+    margin-top: 50px;
+}
+
+
+body,
+html {
+    background-image: url('Images/defaultBG.png');
+    background-repeat: repeat-y;
+    background-size: 50%; 
+}

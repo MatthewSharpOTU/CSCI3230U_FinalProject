@@ -1,0 +1,80 @@
+#logo{
+    float: right;
+    background-image: url("Images/logo_2.png");
+    margin-right: 19%;
+    width: 300px;
+    height: 300px;
+}
+
+#email{
+    margin-left: 58.5%;
+    margin-right:200px;
+    width: 400px;
+}
+
+#emailTaken{
+    margin-left: 960px;
+    margin-right:200px;
+    margin-top: 5px;
+    width:400px;
+    visibility: hidden;
+}
+
+
+#username{
+    margin-left: 58.5%;
+    margin-right:200px;
+    margin-top: 15px;
+    width: 400px;
+}
+
+#userTaken{
+    margin-left: 950px;
+    margin-right:200px;
+    margin-top: 5px;
+    width:400px;
+    visibility: hidden;
+}
+
+
+#password{
+    margin-left: 58.5%;
+    margin-right:200px;
+    margin-top: 15px;
+    width:400px;
+}
+
+#emptyPassword{
+    margin-left: 960px;
+    margin-right:200px;
+    margin-top: 5px;
+    width:400px;
+    visibility: hidden;
+}
+
+
+#available{
+    margin-left: 1020px;
+    margin-right:200px;
+    margin-top: 30px;
+    width:400px;
+    visibility: hidden;
+}
+
+#createAccount{
+    margin-left: 66%;
+    margin-right:200px;
+}
+
+#signIn{
+    margin-left: 68%;
+    margin-right:200px;
+    margin-top: 60px;
+}
+
+body,
+html {
+    background-image: url('Images/defaultBG.png');
+    background-repeat: repeat-y;
+    background-size: 50%; 
+}
