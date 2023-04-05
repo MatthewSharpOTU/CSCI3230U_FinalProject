@@ -45,3 +45,44 @@ body{
     animation: fadeIn2 8s;
     animation-timing-function: linear;
 }
+
+#genres, #artists, #songs {
+    width:625px;
+    height: 100px;
+    font-size: x-large;
+    font-weight: 500;
+    color:black;
+}
+
+#searchBar{
+    color:black;
+
+}
+
+#welcome{
+    font-size: xx-large;
+    color: black;
+    font-weight: 500;
+    margin-left: 30px;
+    animation: fadeIn 4s;
+    animation-timing-function: linear;
+}
+
+th {
+    display: inline-block;
+    width: 150px;
+    margin-top:5px;
+}
+
+input {
+    width: 50px;
+}
+
+td {
+    width: 600px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
