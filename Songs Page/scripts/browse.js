@@ -43,6 +43,7 @@ window.onload = function() {
   input.className = "input";
   input.type = "text";
   input.placeholder = "Your Favourite Artist";
+  input.id = "artist";
   td.appendChild(input);
   //td.innerHTML = "hello";
   tr.appendChild(th);
@@ -61,6 +62,7 @@ window.onload = function() {
   input.className = "input";
   input.type = "text";
   input.placeholder = "Your Favourite Song";
+  input.id = "song";
   td.appendChild(input);
   //td.innerHTML = "hello";
   tr.appendChild(th);
@@ -101,9 +103,14 @@ window.onload = function() {
   button.className = "button is-info is-rounded";
   button.id = "genres";
   button.innerHTML = "Browse By Genre";
+  button.setAttribute('onclick', 'location.href = "genre.html"');
 
   div.appendChild(button);
 
+  br = document.createElement("br");
+  div.appendChild(br);
+  br = document.createElement("br");
+  div.appendChild(br);
   br = document.createElement("br");
   div.appendChild(br);
   br = document.createElement("br");
@@ -113,6 +120,8 @@ window.onload = function() {
   button.className = "button is-primary is-rounded";
   button.id = "songs";
   button.innerHTML = "Browse By Song";
+  button.setAttribute('onclick', 'location.href = "songs.html"');
+
 
   div.appendChild(button);
   br = document.createElement("br");
@@ -120,12 +129,8 @@ window.onload = function() {
   br = document.createElement("br");
   div.appendChild(br);
 
-  button = document.createElement("button");
-  button.className = "button is-success is-rounded";
-  button.id = "artists";
-  button.innerHTML = "Browse By Artist";
 
-  div.appendChild(button);
+  
   for (let i = 0; i<5; i++){
     br = document.createElement("br");
     div.appendChild(br);
@@ -137,7 +142,27 @@ window.onload = function() {
 
   div = document.createElement("div");
   div.className = "column is-one-third";
-
+ 
   divCol.appendChild(div);
   divHero.appendChild(divCol);
+
+  var getInput = "Hello World!!";
+  window.localStorage.setItem("storageName", getInput);
 }
+
+$(document).ready(function() {
+
+  $("div").on("click", "#searchBar", function(event) {
+    console.log(event.target.id);
+    let artistForm = document.getElementById("artist");
+    let songForm = document.getElementById("song");
+    window.localStorage.setItem("search", true);
+    window.localStorage.setItem("artistName", artistForm.value);
+    window.localStorage.setItem("songName", songForm.value);
+    location.href = "songs.html"
+  });
+
+  $("div").on("click", "#songs", function(event) {
+    window.localStorage.setItem("search", false);
+  });
+});
