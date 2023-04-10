@@ -45,3 +45,11 @@ body{
     animation: fadeIn2 8s;
     animation-timing-function: linear;
 }
+
+#HipHop, #Pop, #Rock {
+    width:550px;
+    height: 100px;
+    font-size: x-large;
+    font-weight: 500;
+    color:black;
+}
