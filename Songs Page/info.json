@@ -1,0 +1,45 @@
+[
+
+    {
+        "genre": "HipHop",
+        "tracks": [
+            {
+                "title": "Life is Good",
+                "artist": "Future",
+                "duration": "3:57",
+                "link": ""
+            }
+        ]
+    },
+
+    {
+        "genre": "Pop",
+        "tracks": [
+            {
+                "title": "Out of Time",
+                "artist": "The Weeknd",
+                "duration": "3:34",
+                "link": ""
+            }
+        ] 
+    },
+     
+    {
+        "genre": "Rock",
+        "tracks": [
+            {
+                "title": "Dance, Dance",
+                "artist": "Fall Out Boy",
+                "duration": "3:00",
+                "link": ""
+            },
+            {
+                "title": "Mr. Brightside",
+                "artist": "The Killers",
+                "duration": "3:42",
+                "link": ""
+            }      
+        ]
+    }
+  
+]
