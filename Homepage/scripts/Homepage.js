@@ -19,3 +19,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   
   });
+
+
+window.onload = function() {
+  var points = [
+    {xpoint: 120, ypoint: 25},
+    {xpoint: 125, ypoint: 40},
+    {xpoint: 150, ypoint: 25},
+    {xpoint: 125, ypoint: 0},
+    {xpoint: 100, ypoint: 25},
+    {xpoint: 100, ypoint: 50},
+
+    {xpoint: 225, ypoint: 75},
+    {xpoint: 675, ypoint: 75},
+
+    {xpoint: 900, ypoint: 50},
+    {xpoint: 900, ypoint: 25},
+    {xpoint: 875, ypoint: 0},
+    {xpoint: 850, ypoint: 25},
+    {xpoint: 875, ypoint: 40},
+    {xpoint: 875, ypoint: 25},
+  ]
+    
+  var Gen = d3.line()
+    .x((p) => p.xpoint)
+    .y((p) => p.ypoint)
+    .curve(d3.curveBasis);
+      
+  d3.select("#top-line")
+    .append("path")
+    .attr("d", Gen(points))
+    .attr("fill", "none")
+}

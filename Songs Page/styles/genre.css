@@ -46,12 +46,10 @@ body{
     animation-timing-function: linear;
 }
 
-.headers{
-    border-bottom: 1px solid black;
-    font-size: 25px;
-}
-
-.content{
-    border-bottom: 1px solid gray;
-
+#HipHop, #Pop, #Rock {
+    width:550px;
+    height: 100px;
+    font-size: x-large;
+    font-weight: 500;
+    color:black;
 }
