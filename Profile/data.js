@@ -1,26 +1,30 @@
 let songs = [
     {
-        name: 'song 1',
-        path: 'music/track 1.mp3',
-        artist: 'artist 1',
-        cover: 'images/bg.png'
+        id: '1',
+        name: 'the BLACK seminole',
+        path: 'music/01. the BLACK seminole.mp3',
+        artist: 'Lil Yachty',
+        cover: 'images/Lil Yachty - Let’s Start Here.jpg'
     },
     {
-        name: 'song 2',
-        path: 'music/track 2.mp3',
-        artist: 'artist 2',
-        cover: 'images/bg.png'
+        id: '2',
+        name: 'the ride-',
+        path: 'music/02. the ride-.mp3',
+        artist: 'Lil Yachty',
+        cover: 'images/Lil Yachty - Let’s Start Here.jpg'
     },
     {
-        name: 'song 3',
-        path: 'music/track 3.mp3',
-        artist: 'artist 3',
-        cover: 'images/bg.png'
+        id: '3',
+        name: 'running out of time',
+        path: 'music/03. running out of time.mp3',
+        artist: 'Lil Yachty',
+        cover: 'images/Lil Yachty - Let’s Start Here.jpg'
     },
     {
-        name: 'song 4',
-        path: 'music/track 4.mp3',
-        artist: 'artist 4',
-        cover: 'images/bg.png'
+        id: '4',
+        name: 'pRETTy',
+        path: 'music/04. pRETTy.mp3',
+        artist: 'Lil Yachty',
+        cover: 'images/Lil Yachty - Let’s Start Here.jpg'
     }
 ]

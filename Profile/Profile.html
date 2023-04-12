@@ -7,6 +7,7 @@
     <title>Profile Page</title>
     <link rel="stylesheet" href="styles/Profile.css">
     <script type="text/javascript" src="scripts/spreadsheet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -17,7 +18,73 @@
   </head>
   <body>
     <audio id="audio-player" src=""></audio>
+    
     <div class="container">
+      <div class="side-bar">
+        <h1>Playlists</h1>
+        <div class="playlists">
+          <h4><span></span><i class="fas fa-music"></i>Playlist #1</h4>
+          <h4><span></span><i class="fas fa-music"></i>Playlist #2</h4>
+          <h4><span></span><i class="fas fa-music"></i>Playlist #3</h4>
+        </div>
+        <div class="songs">
+          <li class="song">
+            <span>01</span>
+            <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
+            <h5>
+                the BLACK seminole
+                <div class="subtitle">Lil Yachty</div>
+            </h5>
+                <i class="fas fa-play-circle" id="1"></i>
+        </li>
+        <li class="song">
+            <span>02</span>
+            <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
+            <h5>
+              the ride~
+                <div class="subtitle">Lil Yachty</div>
+            </h5>
+                <i class="fas fa-play-circle" id="2"></i>
+        </li>
+        <li class="song">
+            <span>03</span>
+            <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
+            <h5>
+              running out of time
+                <div class="subtitle">Lil Yachty</div>
+            </h5>
+                <i class="fas fa-play-circle" id="3"></i>
+        </li>
+        <li class="song">
+          <span>04</span>
+          <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
+          <h5>
+            running out of time
+              <div class="subtitle">Lil Yachty</div>
+          </h5>
+              <i class="fas fa-play-circle" id="3"></i>
+        </li>
+        <li class="song">
+          <span>05</span>
+          <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
+          <h5>
+            running out of time
+              <div class="subtitle">Lil Yachty</div>
+          </h5>
+              <i class="fas fa-play-circle" id="3"></i>
+        </li>
+        <li class="song">
+          <span>06</span>
+          <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
+          <h5>
+            running out of time
+              <div class="subtitle">Lil Yachty</div>
+          </h5>
+              <i class="fas fa-play-circle" id="3"></i>
+        </li>
+        </div>
+      </div>
+
       <img src="images/logo-1.png" class="logo">
       <img src="images/home.png" class="home-icon" id="home-icon">
 
@@ -73,36 +140,31 @@
             </div>
           </div>
           <div class="icons">
-            <i class="far fa-heart"></i>
+            <i class="fas fa-plus"></i>
       
           </div>
         </div>
         <div class="progress-controller">
           <div class="controls">
-            <i class="fas fa-random"></i>
-            <i class="fas fa-step-backward" id="backward-button"></i>
-            <i class="play-pause fas fa-play" id="play-button">
-              <span></span>
-              <span></span>
-            </i>
-            <i class="fas fa-step-forward" id="forward-button"></i>
-            <i class="fas fa-undo-alt"></i>
+            <div><i class="fas fa-random" id="shuffle-button"></i></div>
+            <div><i class="fas fa-step-backward" id="backward-button"></i></div>
+            <div><i class="fas fa-play" id="play-button"></i></div>
+            <div><i class="fas fa-step-forward" id="forward-button"></i></div>
+            <div><i class="fas fa-undo-alt" id="repeat-button"></i></div>
           </div>
           <div class="progress-container">
             <span class="current-time">00:00</span>
-            <div class="progress-bar">
-              <div class="progress" id="progress"></div>
-            </div>
+           
+              <input type="range" value="0" class="progress" id="song-progress">
+            
             <span class="song-duration">00:00</span>
           </div>
         </div>
         <div class="other-features">
           <i class="fas fa-list-ul"></i>
           <div class="volume-bar">
-            <i class="fas fa-volume-down"></i>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
+            <i class="fas fa-volume-up" id="volume-icon"></i>
+            <input type="range" value="0" class="progress" id="volume">
           </div>
         </div>
       </div>
