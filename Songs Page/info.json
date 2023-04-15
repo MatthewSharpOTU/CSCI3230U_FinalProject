@@ -1,13 +1,37 @@
 [
 
     {
+        "genre": "EDM",
+        "tracks": [
+            {
+                "title": "One More Time",
+                "artist": "Daft Punk",
+                "duration": "5:22",
+                "link": "Daft_Punk_One_More_Time_Official_Video_.mp3"
+            }
+        ]
+    },
+
+    {
         "genre": "HipHop",
         "tracks": [
             {
                 "title": "Life is Good",
                 "artist": "Future",
                 "duration": "3:57",
-                "link": ""
+                "link": "music/Future_Life_Is_Good_feat_Drake_.mp3"
+            }
+        ]
+    },
+
+    {
+        "genre": "K-Pop",
+        "tracks": [
+            {
+                "title": "Fancy",
+                "artist": "Twice",
+                "duration": "3:33",
+                "link": "music/TWICE_FANCY.mp3"
             }
         ]
     },
@@ -19,7 +43,7 @@
                 "title": "Out of Time",
                 "artist": "The Weeknd",
                 "duration": "3:34",
-                "link": ""
+                "link": "music/The_Weeknd_Out_of_Time_Audio_.mp3"
             }
         ] 
     },
@@ -30,14 +54,14 @@
             {
                 "title": "Dance, Dance",
                 "artist": "Fall Out Boy",
-                "duration": "3:00",
-                "link": ""
+                "duration": "3:01",
+                "link": "music/Fall_Out_Boy_Dance_Dance.mp3"
             },
             {
                 "title": "Mr. Brightside",
                 "artist": "The Killers",
-                "duration": "3:42",
-                "link": ""
+                "duration": "3:43",
+                "link": "music/The_Killers_Mr_Brightside.mp3"
             }      
         ]
     }

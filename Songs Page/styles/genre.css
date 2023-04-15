@@ -46,7 +46,7 @@ body{
     animation-timing-function: linear;
 }
 
-#HipHop, #Pop, #Rock {
+.button.is-danger.is-rounded {
     width:550px;
     height: 100px;
     font-size: x-large;

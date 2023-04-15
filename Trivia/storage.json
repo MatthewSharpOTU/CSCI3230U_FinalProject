@@ -1,0 +1,36 @@
+[
+    {
+        "user": "testUser",
+        "stats": [
+            {
+                "genre": [
+                    {
+                        "HipHop": -1
+                    },
+                    {
+                        "Pop": -1
+                    },
+                    {
+                        "Rock": -1
+                    }
+                ]
+            },
+            {
+                "artist": [
+                    {
+                        "ACDC": -1
+                    },
+                    {
+                        "BTS": -1
+                    },
+                    {
+                        "Daft Punk": -1
+                    },
+                    {
+                        "Drake": -1
+                    }
+                ]
+            }
+        ]
+    }
+]

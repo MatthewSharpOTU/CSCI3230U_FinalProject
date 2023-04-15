@@ -1,0 +1,255 @@
+[
+    {
+        "type":"genre",
+        "category":[
+            {
+                "genre": "HipHop",
+                "questions":[
+                    {
+                        "Q": "Andre Romelle Young is the Name of Which Rapper?",
+                        "Right": "Dr. Dre",
+                        "Wrong": [
+                            "Ice Cube",
+                            "T-Pain",
+                            "Andre 3000"
+                        ]
+                    },
+                    {
+                        "Q": "Where did HipHop Originate?",
+                        "Right": "New York City",
+                        "Wrong": [
+                            "London",
+                            "Los Angeles",
+                            "Miami"
+                        ]
+                    },
+                    {
+                        "Q": "Which Recording Label Signed Artists Dr Dre, Tupac and Snoop Dogg in the 1990s?",
+                        "Right": "Death Row Records",
+                        "Wrong": [
+                            "Bad Boy Records",
+                            "Sony Music",
+                            "Def Jam Recordings"
+                        ]
+                    },
+                    {
+                        "Q": "808s & Heartbreak was Kanye West's __ studio album",
+                        "Right": "fourth",
+                        "Wrong": [
+                            "third",
+                            "fifth",
+                            "second"
+                        ]
+                    },
+                    {
+                        "Q": "Which Artist did Eminem not Beef With?",
+                        "Right": "Nicki Minaj",
+                        "Wrong": [
+                            "Mariah Carey",
+                            "Ja Rule",
+                            "Machine Gun Kelly"
+                        ]
+                    }
+                ]
+            },
+        
+            {
+                "genre": "Pop",
+                "questions":[
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    }
+                ]
+        
+            },
+             
+            {
+                "genre": "Rock",
+                "questions":[
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    }
+                ]
+        
+            }
+        ]
+        
+    },
+    {
+        
+        "type":"artist",
+        "category":[
+            {
+                "topic": "ACDC",
+                "questions":[
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    }
+                ]
+            },
+        
+            {
+                "topic": "BTS",
+                "questions":[
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    }
+                ]
+        
+            },
+            {
+                "topic": "Daft Punk",
+                "questions":[
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    }
+                ]
+        
+            },
+            {
+                "topic": "Drake",
+                "questions":[
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    },
+                    {
+                        "Q": "",
+                        "Right": "",
+                        "Wrong": ""
+                    }
+                ]
+        
+            }
+        ]
+        
+    }
+    
+  
+]
