@@ -82,7 +82,7 @@ body{
 }
 
 .title {
-    top: -400px;
+    top: -450px;
     font-family: Arial;
     font-size: 49px;
     position: relative;
@@ -91,7 +91,7 @@ body{
 }
 
 .subtitle {
-    top: -380px;
+    top: -430px;
     font-family: Arial;
     font-size: 30px;
     position: relative;
@@ -137,7 +137,7 @@ body{
 
     #top-mid-left {
         position: absolute;
-        top: 350px;
+        top: 400px;
         right: 40px;
         width: 400px;
         height: 100px;
@@ -147,7 +147,7 @@ body{
 
     #top-left {
         position: absolute;
-        top: 350px;
+        top: 400px;
         left: 40px;
         width: 400px;
         height: 100px;
@@ -169,7 +169,7 @@ body{
 @media (width < 960px) {
     #bottom-mid-left {
         position: absolute;
-        top: 650px;
+        top: 675px;
         left: 50px;
         width: 400px;
         height: 100px;
@@ -179,7 +179,7 @@ body{
 
     #top-mid-left {
         position: absolute;
-        top: 350px;
+        top: 375px;
         left: 50px;
         width: 400px;
         height: 100px;
@@ -189,7 +189,7 @@ body{
 
     #top-left {
         position: absolute;
-        top: 500px;
+        top: 525px;
         left: 50px;
         width: 400px;
         height: 100px;
@@ -199,7 +199,7 @@ body{
 
     #bottom-left {
         position: absolute;
-        top: 800px;
+        top: 825px;
         left: 50px;
         width: 400px;
         height: 100px;
