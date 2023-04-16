@@ -7,32 +7,104 @@
                 "title": "One More Time",
                 "artist": "Daft Punk",
                 "duration": "5:22",
-                "link": "Daft_Punk_One_More_Time_Official_Video_.mp3"
-            }
+                "link": "music/Daft_Punk_One_More_Time_Official_Video_.mp3"
+            },
+            {
+                "title": "Levels",
+                "artist": "Avicii",
+                "duration": "3:21",
+                "link": "music/Avicii_Levels.mp3"
+            },      
+            {
+                "title": "Titanium",
+                "artist": "David Guetta",
+                "duration": "4:04",
+                "link": "music/David_Guetta_Titanium_feat_Sia_.mp3"
+            },      
+            {
+                "title": "Ghosts N Stuff",
+                "artist": "Deadmau5",
+                "duration": "3:11",
+                "link": "music/Deadmau5_Ghosts_N_Stuff.mp3"
+            },      
+            {
+                "title": "Wake Me Up",
+                "artist": "Avicii",
+                "duration": "4:28",
+                "link": "music/Avicii_Wake_Me_Up.mp3"
+            }      
         ]
     },
 
     {
         "genre": "HipHop",
-        "tracks": [
+        "tracks": [   
+            {
+                "title": "California Love",
+                "artist": "2Pac",
+                "duration": "4:44",
+                "link": "music/2Pac_California_Love.mp3"
+            },      
+            {
+                "title": "Crazy in Love",
+                "artist": "Beyonce",
+                "duration": "3:55",
+                "link": "music/Beyoncé_Crazy_In_Love_feat_Jay_Z_.mp3"
+            },
+            {
+                "title": "Hey Ya",
+                "artist": "Outkast - Andre 3000",
+                "duration": "3:46",
+                "link": "music/Outkast_Hey_Ya_.mp3"
+            },
             {
                 "title": "Life is Good",
                 "artist": "Future",
                 "duration": "3:57",
                 "link": "music/Future_Life_Is_Good_feat_Drake_.mp3"
+            },      
+            {
+                "title": "Moment 4 Life",
+                "artist": "Nicki Minaj",
+                "duration": "4:39",
+                "link": "music/Nicki_Minaj_Moment_4_Life.mp3"
             }
         ]
     },
 
     {
         "genre": "K-Pop",
-        "tracks": [
+        "tracks": [    
             {
-                "title": "Fancy",
-                "artist": "Twice",
+                "title": "Blue Flame",
+                "artist": "LE SSERAFIM",
+                "duration": "3:21",
+                "link": "music/LE_SSERAFIM_Blue_Flame.mp3"
+            }, 
+            {
+                "title": "FANCY",
+                "artist": "TWICE",
                 "duration": "3:33",
                 "link": "music/TWICE_FANCY.mp3"
-            }
+            },
+            {
+                "title": "God's Menu",
+                "artist": "Stray Kids",
+                "duration": "2:47",
+                "link": "music/Stray_Kids_God’s_Menu.mp3"
+            },      
+            {
+                "title": "I AM",
+                "artist": "IVE",
+                "duration": "3:03",
+                "link": "music/IVE_I_AM.mp3"
+            },      
+            {
+                "title": "Spring Day",
+                "artist": "BTS",
+                "duration": "4:34",
+                "link": "music/BTS_Spring_Day.mp3"
+            }     
         ]
     },
 
@@ -40,11 +112,35 @@
         "genre": "Pop",
         "tracks": [
             {
+                "title": "Africa",
+                "artist": "Toto",
+                "duration": "4:31",
+                "link": "music/Toto_Africa_Official_HD_Video_.mp3"
+            },  
+            {
+                "title": "Locked out of Heaven",
+                "artist": "Bruno Mars",
+                "duration": "3:53",
+                "link": "music/Bruno_Mars_Locked_out_of_Heaven.mp3"
+            },
+            {
                 "title": "Out of Time",
                 "artist": "The Weeknd",
                 "duration": "3:34",
                 "link": "music/The_Weeknd_Out_of_Time_Audio_.mp3"
-            }
+            },      
+            {
+                "title": "Smooth Criminal",
+                "artist": "Michael Jackson",
+                "duration": "4:16",
+                "link": "music/Michael_Jackson_Smooth_Criminal.mp3"
+            },      
+            {
+                "title": "Umbrella",
+                "artist": "Rihanna",
+                "duration": "4:35",
+                "link": "music/Rihanna_Umbrella.mp3"
+            }         
         ] 
     },
      
@@ -58,11 +154,29 @@
                 "link": "music/Fall_Out_Boy_Dance_Dance.mp3"
             },
             {
+                "title": "Dirty Deeds Done Dirt Cheap",
+                "artist": "AC/DC",
+                "duration": "3:51",
+                "link": "music/AC_DC_Dirty_Deeds_Done_Dirt_Cheap.mp3"
+            },
+            {
+                "title": "Go Your Own Way",
+                "artist": "Fleetwood Mac",
+                "duration": "3:44",
+                "link": "music/Go_Your_Own_Way_2004_Remaster_.mp3"
+            }, 
+            {
                 "title": "Mr. Brightside",
                 "artist": "The Killers",
                 "duration": "3:43",
                 "link": "music/The_Killers_Mr_Brightside.mp3"
-            }      
+            },
+            {
+                "title": "Stressed Out",
+                "artist": "Twenty One Pilots",
+                "duration": "3:22",
+                "link": "music/Twenty_One_Pilots_Stressed_Out.mp3"
+            }           
         ]
     }
   
