@@ -72,3 +72,13 @@ window.onload = function() {
 
     divHero.appendChild(divCol);
 }
+
+$(document).ready(function(){
+
+  $("div").on("click", "button", function(event) {
+    console.log(event.target.id);
+    window.localStorage.setItem("trivia", event.target.id);
+    window.localStorage.setItem("type", "artist");
+    location.href = "questionsPage.html";
+  });
+});

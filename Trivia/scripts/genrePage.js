@@ -54,8 +54,8 @@ window.onload = function() {
 
               let button = document.createElement("button");
               button.className = "button is-info is-rounded";
-              button.id = e.genre;
-              button.innerHTML = "Take the "+e.genre+" Quiz";
+              button.id = e.topic;
+              button.innerHTML = "Take the "+e.topic+" Quiz";
               //button.setAttribute('onclick', 'myFunction');
 
               div.appendChild(button);
@@ -78,5 +78,7 @@ $(document).ready(function(){
   $("div").on("click", "button", function(event) {
     console.log(event.target.id);
     window.localStorage.setItem("trivia", event.target.id);
+    window.localStorage.setItem("type", "genre");
+    location.href = "questionsPage.html";
   });
 });
