@@ -3,115 +3,98 @@
         "type":"genre",
         "category":[
             {
-                "genre": "HipHop",
+                "topic": "HipHop",
+                "id":1,
                 "questions":[
                     {
                         "Q": "Andre Romelle Young is the Name of Which Rapper?",
                         "Right": "Dr. Dre",
-                        "Wrong": [
-                            "Ice Cube",
-                            "T-Pain",
-                            "Andre 3000"
-                        ]
+                        "Options": "a) Ice Cube b) Dr. Dre c) T-Pain d) Andre 3000"
                     },
                     {
                         "Q": "Where did HipHop Originate?",
                         "Right": "New York City",
-                        "Wrong": [
-                            "London",
-                            "Los Angeles",
-                            "Miami"
-                        ]
+                        "Options": "a) London b) Los Angeles c) New York City d) Miami"
                     },
                     {
                         "Q": "Which Recording Label Signed Artists Dr Dre, Tupac and Snoop Dogg in the 1990s?",
                         "Right": "Death Row Records",
-                        "Wrong": [
-                            "Bad Boy Records",
-                            "Sony Music",
-                            "Def Jam Recordings"
-                        ]
+                        "Options": "a) Death Row Records b) Bad Boy Records c) Sony Music d) Def Jam Recordings"
                     },
                     {
                         "Q": "808s & Heartbreak was Kanye West's __ studio album",
                         "Right": "fourth",
-                        "Wrong": [
-                            "third",
-                            "fifth",
-                            "second"
-                        ]
+                        "Options": "a) third b) fourth c) fifth d) second"
                     },
                     {
                         "Q": "Which Artist did Eminem not Beef With?",
                         "Right": "Nicki Minaj",
-                        "Wrong": [
-                            "Mariah Carey",
-                            "Ja Rule",
-                            "Machine Gun Kelly"
-                        ]
+                        "Options": "a) Mariah Carey b) Nicki Minaj c) Ja Rule d) Machine Gun Kelly"
                     }
                 ]
             },
         
             {
-                "genre": "Pop",
+                "topic": "Pop",
+                "id":2,
                 "questions":[
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "This Artist was the Youngest Solo Artist with a Number 1 Billboard Hot 100?",
+                        "Right": "Stevie Wonder",
+                        "Options": "a) Justin Bieber b) Billie Eilish c) Taylor Swift d) Stevie Wonder"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Lady Gaga's Stage Name Originated From Which Band's Song: 'Radio Ga Ga'?",
+                        "Right": "Queen",
+                        "Options": "a) The Who b) Eagles c) Queen d) The Beatles"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "What is Bruno Mars' Real First Name?",
+                        "Right": "Peter",
+                        "Options": "a) Bruno b) Peter c) Joshua d) John"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Michael Jackson is Known for Many Dance Moves, One Being the 45 Degree Forward Lean, Which Debuted in this Song?",
+                        "Right": "Smooth Criminal",
+                        "Options": "a) Beat It b) Billie Jean c) Smooth Criminal d) They Don't Care About Us"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "What was the Name of Justin Timberlake's Debut Solo Album in 2002?",
+                        "Right": "Justified",
+                        "Options": "a) Justified b) Freedom c) Validation d) Independence"
                     }
                 ]
         
             },
              
             {
-                "genre": "Rock",
+                "topic": "Rock",
+                "id":3,
                 "questions":[
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "'Go Your Own Way', 'The Chain' and 'Dreams' are From This Band's 1976 Album - Rumours?",
+                        "Right": "Fleetwood Mac",
+                        "Options": "a) Led Zeppelin b) Fleetwood Mac c) Aerosmith d) Eagles"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Which of These Bands Aren't in the Rock and Roll Hall of Fame?",
+                        "Right": "Iron Maiden",
+                        "Options": "a) Iron Maiden b) The Cars c) ACDC d) Black Sabbath"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Which of These Queen Albums Were Released Most Recently?",
+                        "Right": "Made in Heaven",
+                        "Options": "a) Made in Heaven b) Sheer Heart Attack c) Innuendo d) A Kind of Magic"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Tyler Joseph and Josh Dun are Members of this 2010's Rock Group?",
+                        "Right": "Twenty One Pilots",
+                        "Options": "a) The Cab b) Imagine Dragons c) Cage the Elephant d) Twenty One Pilots"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Which of These is Not a Green Day Song?",
+                        "Right": "Sugar, We're Goin Down",
+                        "Options": "a) Boulevard of Broken Dreams b) Basket Case c) 21 Guns d) Sugar, We're Goin Down"
                     }
                 ]
         
@@ -125,124 +108,128 @@
         "category":[
             {
                 "topic": "ACDC",
+                "id":4,
                 "questions":[
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "What Year was AC/DC Inducted Into the Rock and Roll Hall of Fame?",
+                        "Right": "2003",
+                        "Options": "a) 1988 b) 1994 c) 2003 d) 2011"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "AC/DC was Heavily Featured in the Soundtrack of Which Marvel Film?",
+                        "Right": "Iron Man 2",
+                        "Options": "a) Iron Man b) Iron Man 2 c) The Incredible Hulk d) The Avengers"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Which of These is Not an AC/DC Album Cover?",
+                        "Right": "Shoot to Kill",
+                        "Options": "a) Highway to Hell b) Shoot to Kill c) Back in Black d) Dirty Deeds Done Dirt Cheap"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "What is the Only Band to Have an Encore Performance with AC/DC?",
+                        "Right": "Cheap Trick",
+                        "Options": "a) Aerosmith b) Metallica c) Cheap Trick d) Kiss"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Who was Not a Member for AC/DC?",
+                        "Right": "Marty Young",
+                        "Options": "a) Bon Scott b) Brian Johnson c) Phil Rudd d) Marty Young"
                     }
                 ]
             },
         
             {
                 "topic": "BTS",
+                "id":5,
                 "questions":[
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "What Year did BTS Debut?",
+                        "Right": "2013",
+                        "Options": "a) 2013 b) 2014 c) 2012 d) 2015"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Who is the Youngest Member in BTS?",
+                        "Right": "Jungkook",
+                        "Options": "a) Jimin b) J-Hope c) RM d) Jungkook"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Which of These Songs Were Not Featured in their 2020 Album, Map of the Soul: 7",
+                        "Right": "Dynamite",
+                        "Options": "a) Dynamite b) Boy With Luv c) Dionysus d) Black Swan"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "The MAMA Awards is a South Korean Award Show to Celebrate the Asian Music Industry. How many MAMA Awards has BTS won?",
+                        "Right": "49",
+                        "Options": "a) 61 b) 34 c) 49 d) 55"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Which of These Artists has BTS Not Collabed With?",
+                        "Right": "Ed Sheeran",
+                        "Options": "a) Halsey b) Nicki Minaj c) Juice WRLD d) Ed Sheeran"
                     }
                 ]
         
             },
             {
                 "topic": "Daft Punk",
+                "id":6,
                 "questions":[
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "What Year did Daft Punk Start?",
+                        "Right": "1993",
+                        "Options": "a) 1990 b) 1993 c) 1997 d) 2000"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Who has Daft Punk Collabed With?",
+                        "Right": "Pharrell Williams",
+                        "Options": "a) Ozzy Osbourne b) Travis Scott c) Pharrell Williams d) Rihanna"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Which of These Songs has the Most UK Shart Sales?",
+                        "Right": "Starboy",
+                        "Options": "a) Around the World b) One More Time c) Starboy d) Harder Better Faster Stronger"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "What Year did Daft Punk Formally End?",
+                        "Right": "2021",
+                        "Options": "a) 2017 b) 2019 c) 2021 d) 2023"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "what is the Nationality of Daft Punk Members?",
+                        "Right": "French",
+                        "Options": "a) Swedish b) German c) Swiss d) French"
                     }
                 ]
         
             },
             {
                 "topic": "Drake",
+                "id":7,
                 "questions":[
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "When Did Drake Debut?",
+                        "Right": "2006",
+                        "Options": "a) 2006 b) 2008 c) 2010 d) 2012"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "What Group was Drake Part of With Nicki Minaj and Lil Wayne?",
+                        "Right": "Young Money",
+                        "Options": "a) New Money b) Young Money c) Young Game d) Degrassi"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Which Brand was Drake Not a Founder/Co-Founder of?",
+                        "Right": "Shure",
+                        "Options": "a) OVO b) Virginia Black c) Fring's d) Shure"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Drake was Given This Role for the NBA Team Toronto Raptors?",
+                        "Right": "Global Ambassador",
+                        "Options": "a) Global Ambassador b) Global Media Spokesperson c) Honorary Ambassador d) Media Coordinator"
                     },
                     {
-                        "Q": "",
-                        "Right": "",
-                        "Wrong": ""
+                        "Q": "Which of These is Drake's Oldest Album?",
+                        "Right": "So Far Gone",
+                        "Options": "a) More Life b) Thank Me Later c) So Far Gone d) If You're Reading This Its Too Late"
                     }
                 ]
         
