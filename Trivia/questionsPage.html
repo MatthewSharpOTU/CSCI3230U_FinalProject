@@ -5,25 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wave</title>
     <!-- reference your stylesheet here -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="styles/artistsPage.css">
+    <link rel="stylesheet" href="styles/questionsPage.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
     <!-- reference your source code here -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
       integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="scripts/artistPage.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="scripts/questionsPage.js" defer></script>
 </head>
 <body>
 
-    <nav class="navbar navbar-light" style="background-color: pink;" role="navigation" aria-label="main navigation">
+    <!-- <nav class="navbar navbar-light" style="background-color: pink;" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             
-            <img src="images/logo-1.png" alt="Project Logo" width="50" height="50">
-
-            
-
-            <!-- <a class="navbar-item">Welcome to Wave</a> -->
-
+            <img src="images/logo.png" alt="Project Logo" width="75" height="75">
+ 
             <div class="navbar-burger" data-target="navbarExampleTransparentExample">
                 <span></span>
                 <span></span>
@@ -75,9 +72,50 @@
 
             </div>
         </div>
-    </nav>
+    </nav> -->
 
-    <div class="hero is-fullheight has-background" id="hero">
+    <div id="app">
+        <h1 id = "Header"></h1>
+        <h3 id = "subheader"></h3>
+        <br>
+        <div>
+            <br>
+            <h2 class="answer">{{ cards[0].model }}</h2>
+            <h3>{{ cards[0].question }}</h3>
+            <br>
+            <input type="text" class = "answer" id = "a1">
+        </div>
+        <div>
+            <br>
+            <h2 class="answer">{{ cards[1].model }}</h2>
+            <h3>{{ cards[1].question }}</h3>
+            <br>
+            <input type="text" class = "answer" id = "a2">
+        </div>
+        <div>
+            <br>
+            <h2 class="answer">{{ cards[2].model }}</h2>
+            <h3>{{ cards[2].question }}</h3>
+            <br>
+            <input type="text" class = "answer" id = "a3">
+        </div>
+        <div>
+            <br>
+            <h2 class="answer">{{ cards[3].model }}</h2>
+            <h3>{{ cards[3].question }}</h3>
+            <br>
+            <input type="text" class = "answer" id = "a4">
+        </div>
+        <div>
+            <br>
+            <h2 class="answer">{{ cards[4].model }}</h2>
+            <h3>{{ cards[4].question }}</h3>
+            <br>
+            <input type="text" class = "answer" id = "a5" value="">
+        </div>
     </div>
+    <br>
+    <br>
+    <button>Submit</button>
 
 </body>
