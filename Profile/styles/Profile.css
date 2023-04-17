@@ -30,49 +30,6 @@
     outline: none;
 }
 
-.menu-icon{
-    width: 50px;
-    position: absolute;
-    right: 40px;
-    top: 40px;
-    background-color: white;
-    border-radius: 25px;
-    padding: 5px 5px 5px 5px;
-    cursor: pointer;
-}
-
-.home-icon{
-    width: 50px;
-    position: absolute;
-    left: 40px;
-    top: 40px;
-    background-color: white;
-    border-radius: 25px;
-    padding: 5px 5px 5px 5px;
-    cursor: pointer;
-}
-
-.back-icon{
-    width: 60px;
-    position: absolute;
-    left: 40px;
-    bottom: 40px;
-    background-color: white;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.message-icon{
-    width: 60px;
-    position: absolute;
-    right: 40px;
-    bottom: 40px;
-    background-color: white;
-    border-radius: 25px;
-    padding: 5px 5px 5px 5px;
-    cursor: pointer;
-}
-
 .profile-icon{
     width: 120px;
     border-radius: 50%;
@@ -149,6 +106,10 @@
     font-weight: 100px;
 }
 
+.trivia-rankings ol li{
+    font-size: 16px;
+}
+
 .intro h2{
     background: white;
     color: black;
@@ -160,13 +121,18 @@
 }
 
 .logo{
-    width: 60px;
+    width: 70px;
     position: absolute;
     margin-top: 35px;
     align-content: center;
-    background-color: white;
+    background-color: transparent;
     border-radius: 50px;
     cursor: pointer;
+}
+
+.logo:hover{
+    background-color: #f53192;
+    
 }
 
 .header{
@@ -260,11 +226,11 @@ width: 0%;
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 75%;
+    width: 90%;
     height: 7rem;
     padding: var(--padding);
     color: var(--primary-color);
-    opacity: 80%;
+    opacity: 90%;
     border-radius: 10px;
     bottom: 5px;
 }
@@ -293,39 +259,25 @@ i:hover{
     gap: 1em;
 }
 .song-image {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 110px;
     display: block;
     position: relative;
-    background-image: url('/Profile/images/bg.png');
     background-size: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.08);
-    margin-left: 15px;
-}
-
-.song-image::before{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: black;
+    border-radius: 5%;
+    margin-left: 10px;
 }
 
 .song-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: 15px;
     
 }
 
 .song-description p {
     margin: 0.2em;
+    width: 100%;
 }
 
 .title,
@@ -335,6 +287,7 @@ i:hover{
     -webkit-line-clamp: 1;
     overflow: hidden;
 }
+
 .title:hover,
 .artist:hover {
     text-decoration: underline;
@@ -345,6 +298,7 @@ i:hover{
 .icons{
     display: flex;
     gap: 1em;
+    cursor: pointer;
 }
 .progress-controller{
     width: 100%;
@@ -461,13 +415,14 @@ i:hover{
 
 .side-bar .playlists {
     margin:  20px 0px 0px 20px;
+    
 }
 
 .side-bar .playlists h4 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     padding-bottom: 10px;
-    color: #4c5262;
+    color: #96a1bf;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -475,7 +430,7 @@ i:hover{
 }
 
 .side-bar .playlists h4:hover {
-    color: #fff;
+    color: #f53192;
 }
 .side-bar .playlists h4 span{
     position: relative;
@@ -494,9 +449,7 @@ i:hover{
 .side-bar .playlists h4:hover span::before{
     border: 2px solid #fff;
 }
-.side-bar .playlists h4 .fas{
-    display: none;
-}
+
 .side-bar .playlists .active{
     color: #36e2ec;
 }
@@ -524,10 +477,10 @@ i:hover{
     transition: .3s linear;
 }
 .side-bar .songs li:hover{
-    background: rgb(105, 105, 170,.1);
+    background: #a4185e;
 }
 .side-bar .songs li span{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: #4c5262;
 }
@@ -537,18 +490,64 @@ i:hover{
     margin-left: 15px;
 }
 .side-bar .songs li h5{
-    font-size: 11px;
+    font-size: 13px;
     margin-left: 15px;
 }
 
 .side-bar .songs li h5 .subtitle{
-    font-size: 10px;
-    color: #4c5262;
+    font-size: 11px;
+    color: #8089a1;
 }
 
 .side-bar .songs li .fas{
     position: absolute;
-    right: 15px;
-    top: 12px;
+    right: 18px;
+    top: 11px;
+    font-size: 22px;
+}
+
+#edit-user{
+    width: 50px;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    padding: 5px 5px 5px 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 25px;
+}
+
+#friends{
+    width: 50px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    padding: 5px 5px 5px 5px;
+    cursor: pointer;
+    color: black;
+    font-size: 25px;
+}
+
+#settings{
+    width: 50px;
+    position: absolute;
+    left: 47%;
+    top: 40px;
+    cursor: pointer;
+    color: black;
+    font-size: 25px;
+}
+
+.playlist-options{
+    align-items: center;
+    text-align: center;
     font-size: 20px;
+}
+
+.playlist-options .fas{
+    cursor: pointer;
+}
+
+.playlist-options .fas:hover {
+    color: #f53192;
 }

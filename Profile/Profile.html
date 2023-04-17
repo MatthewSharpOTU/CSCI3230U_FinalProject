@@ -18,89 +18,40 @@
   </head>
   <body>
     <audio id="audio-player" src=""></audio>
-    
     <div class="container">
       <div class="side-bar">
-        <h1>Playlists</h1>
+        <h1>Playlists </h1>
+
         <div class="playlists">
-          <h4><span></span><i class="fas fa-music"></i>Playlist #1</h4>
-          <h4><span></span><i class="fas fa-music"></i>Playlist #2</h4>
-          <h4><span></span><i class="fas fa-music"></i>Playlist #3</h4>
+          <h4 class="playlist"><span></span>Playlist #1</h4>
+          <h4 class="playlist"><span></span>Playlist #2</h4>
+          <h4 class="playlist"><span></span>Playlist #3</h4>
         </div>
         <div class="songs">
-          <li class="song">
-            <span>01</span>
-            <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
-            <h5>
-                the BLACK seminole
-                <div class="subtitle">Lil Yachty</div>
-            </h5>
-                <i class="fas fa-play-circle" id="1"></i>
-        </li>
-        <li class="song">
-            <span>02</span>
-            <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
-            <h5>
-              the ride~
-                <div class="subtitle">Lil Yachty</div>
-            </h5>
-                <i class="fas fa-play-circle" id="2"></i>
-        </li>
-        <li class="song">
-            <span>03</span>
-            <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
-            <h5>
-              running out of time
-                <div class="subtitle">Lil Yachty</div>
-            </h5>
-                <i class="fas fa-play-circle" id="3"></i>
-        </li>
-        <li class="song">
-          <span>04</span>
-          <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
-          <h5>
-            running out of time
-              <div class="subtitle">Lil Yachty</div>
-          </h5>
-              <i class="fas fa-play-circle" id="3"></i>
-        </li>
-        <li class="song">
-          <span>05</span>
-          <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
-          <h5>
-            running out of time
-              <div class="subtitle">Lil Yachty</div>
-          </h5>
-              <i class="fas fa-play-circle" id="3"></i>
-        </li>
-        <li class="song">
-          <span>06</span>
-          <img src="images/Lil Yachty - Let’s Start Here.jpg" alt="Alan">
-          <h5>
-            running out of time
-              <div class="subtitle">Lil Yachty</div>
-          </h5>
-              <i class="fas fa-play-circle" id="3"></i>
-        </li>
+          
+        </div>
+        <div class="playlist-options">
+          <i class="fas fa-edit" id="edit"></i>
+          <i class="fas fa-trash delete" id="delete"></i>
+          <i class="fas fa-plus" id="playlist-add"></i>
         </div>
       </div>
 
-      <img src="images/logo-1.png" class="logo">
-      <img src="images/home.png" class="home-icon" id="home-icon">
-
-      <img src="images/menu.png" class="menu-icon">
+      <img src="images/logo-1.png" class="logo">  
         <div class="bar"></div>
-      <img src="images/message.png" class="message-icon">
-      <img src="images/back.png" class="back-icon">
       <div class="profile-box">
+        
         <div class="header">
           <img src="images/points.png" class="points-icon">
           <h2>500</h2>
         </div>
+        <i class="fas fa-user-edit" id="edit-user"></i>
+        <i class="fas fa-users" id="friends"></i>
+        <i class="fas fa-cog" id="settings"></i>
         <div class="intro">
-          <h2>Joe Biden</h2>        
+          <h2 id="user-name" contenteditable="false">Joe Biden</h2>        
           <img src="images/profile.png" class="profile-icon">
-          <h2>Metal Head</h2>
+          <h2 id="user-motto" contenteditable="false">Metal Head</h2>
         </div>
         <div class="description">
           <div class="trivia-rankings">
@@ -126,7 +77,7 @@
         </div>
         <h2 class="bio-header">About Joe</h2>
         <div class="profile-bio">
-          <p>Hello World!</p>
+          <p id="user-bio" contenteditable="false">Hello World!</p>
         </div> 
       </div>
       <div class="music-player">
@@ -140,7 +91,7 @@
             </div>
           </div>
           <div class="icons">
-            <i class="fas fa-plus"></i>
+            <i class="fas fa-plus" id="add-song"><var id="song-id" value="4"></var></i>
       
           </div>
         </div>
