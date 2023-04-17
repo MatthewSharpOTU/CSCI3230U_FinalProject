@@ -1,0 +1,178 @@
+body,
+html {
+    background-image: url('Images/background.gif');
+    overflow-x:auto;
+}
+
+#header{
+    font-size: 80px;
+    font-weight: 600;
+    text-align: center;
+    color: #ce2eff;
+    text-shadow: 2px 2px 0px white;
+}
+
+#settings{
+    display: flex;
+}
+
+
+#accountHeader{
+    font-size: 40px;
+    font-weight: 600;
+    color: #ce2eff;
+    text-shadow: 2px 2px 0px white;
+}
+
+#accountSettings{
+    width:500px;
+    height:100vh;
+    border: 2px solid black;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background: rgb(0,0,0,0.3);
+}
+
+#dropdown{
+    margin-top: 100px;
+}
+
+#update{
+    margin-top: 125px;
+    width: 400px;
+}
+
+#submit{
+    margin-top: 50px;
+}
+
+#backgroundSettings{
+    width:540px;
+    height:100vh;
+    border: 2px solid black;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background: rgb(0,0,0,0.3);
+}
+
+#backgroundHeader{
+    font-size: 40px;
+    font-weight: 600;
+    color: #ce2eff;
+    text-shadow: 2px 2px 0px white;
+}
+
+#background1{
+    display:block;
+    margin-top:30px;
+}
+
+#img1{
+    border: 2px solid black;
+    background-image: url("Images/background-previews/background.gif");
+    height: 100px;
+    width: 100px;
+}
+
+#bg1Button{
+    margin-top: 25px;
+}
+
+#background2{
+    display:block;
+    margin-top:40px;
+}
+
+#img2{
+    border: 2px solid black;
+    background-image: url("Images/background-previews/background2.gif");
+    height: 100px;
+    width: 100px;
+}
+
+#bg2Button{
+    margin-top: 25px;
+}
+
+#background3{
+    display:block;
+    margin-top:40px;
+}
+
+#img3{
+    border: 2px solid black;
+    background-image: url("Images/background-previews/background3.gif");
+    height: 100px;
+    width: 100px;
+}
+
+#bg3Button{
+    margin-top: 25px;
+}
+
+#profileSettings{
+    width:500px;
+    height:100vh;
+    border: 2px solid black;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background: rgb(0,0,0,0.3);
+}
+
+#profileHeader{
+    font-size: 40px;
+    font-weight: 600;
+    color: #ce2eff;
+    text-shadow: 2px 2px 0px white;
+}
+
+#profile1{
+    display:block;
+    margin-top:30px;
+}
+
+#pfp1{
+    border: 2px solid black;
+    background-image: url("Images/profile-previews/profile1.jpg");
+    height: 100px;
+    width: 100px;
+}
+
+#pfp1Button{
+    margin-top: 25px;
+}
+
+#profile2{
+    display:block;
+    margin-top:40px;
+}
+
+#pfp2{
+    border: 2px solid black;
+    background-image: url("Images/profile-previews/profile2.jpg");
+    height: 100px;
+    width: 100px;
+}
+
+#pfp2Button{
+    margin-top: 25px;
+}
+
+#profile3{
+    display:block;
+    margin-top:40px;
+}
+
+#pfp3{
+    border: 2px solid black;
+    background-image: url("Images/profile-previews/profile3.jpg");
+    height: 100px;
+    width: 100px;
+}
+
+#pfp3Button{
+    margin-top: 25px;
+}

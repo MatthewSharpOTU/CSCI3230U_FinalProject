@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave - Sign In</title>
+    <script language="JavaScript" type="text/JavaScript" src="Scripts/accountSettings.js"></script>
+    <link rel="stylesheet" href="Styling/accountSettings.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    
+    <!-- reference your source code here -->
+</head>
+<body>
+    <img id="logo" alt=" ">
+    <p id="header">Settings</p>
+    <div id="settings">
+        <div id = "accountSettings">
+            <p id="accountHeader">Account Settings</p>
+            <form method="post" action="/updateAccount">
+                <div id = "dropdown" class="select is-info">
+                    <select title="idk" name="option">
+                    <option name="Change Username">Change Username</option>
+                    <option name="Change Password">Change Password</option>
+                    <option name="Update Email">Update Email</option>
+                    </select>
+                </div>
+
+                <div class="control">
+                    <input id="update" name="update" class="input is-link" type="text" required placeholder="New info">
+                </div>
+
+                <div class="control" id="submit">
+                    <button type="submit" title = "Update" value="Update" class="button is-link is-light is-rounded">Update</button>
+                </div>
+            </form>
+        </div>
+        <div id = "backgroundSettings">
+            <p id="backgroundHeader">Background Settings</p>
+            <div id="background1">
+                <img id="img1">
+                <button id="bg1Button" type="submit" title = "Select" value="Select" class="button is-link is-light is-rounded">Select</button>
+            </div>
+            <div id="background2">
+                <img id="img2">
+                <button id="bg2Button"type="submit" title = "Select" value="Select" class="button is-link is-light is-rounded">Select</button>
+            </div>
+            <div id="background3">
+                <img id="img3">
+                <button id="bg3Button" type="submit" title = "Select" value="Select" class="button is-link is-light is-rounded">Select</button>
+            </div>
+        </div>
+        <div id = "profileSettings">
+            <p id="profileHeader">Profile Settings</p>
+            <div id="profile1">
+                <img id="pfp1">
+                <button id="pfp1Button" type="submit" title = "Select" value="Select" class="button is-link is-light is-rounded">Select</button>
+            </div>
+            <div id="profile2">
+                <img id="pfp2">
+                <button id="pfp2Button"type="submit" title = "Select" value="Select" class="button is-link is-light is-rounded">Select</button>
+            </div>
+            <div id="profile3">
+                <img id="pfp3">
+                <button id="pfp3Button" type="submit" title = "Select" value="Select" class="button is-link is-light is-rounded">Select</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

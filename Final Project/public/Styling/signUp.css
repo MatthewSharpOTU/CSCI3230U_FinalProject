@@ -1,7 +1,15 @@
+#header{
+    font-size: 30px;
+    font-weight: 100;
+    margin-left: 67.75%;
+    margin-bottom: 5px;
+    margin-right: 100px;
+}
+
 #logo{
     float: right;
     background-image: url("Images/logo_2.png");
-    margin-right: 19%;
+    margin-right: 19.5%;
     width: 300px;
     height: 300px;
 }
@@ -62,19 +70,19 @@
 }
 
 #createAccount{
-    margin-left: 66%;
+    margin-left: 65.75%;
     margin-right:200px;
 }
 
 #signIn{
-    margin-left: 68%;
+    margin-left: 67.75%;
     margin-right:200px;
     margin-top: 60px;
 }
 
 body,
 html {
-    background-image: url('Images/defaultBG.png');
+    background-image: url('Images/background.gif');
     background-repeat: repeat-y;
     background-size: 50%; 
 }

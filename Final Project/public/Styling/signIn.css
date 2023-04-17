@@ -1,7 +1,15 @@
+#header{
+    font-size: 30px;
+    font-weight: 100;
+    margin-left: 68%;
+    margin-bottom: 5px;
+    margin-right: 100px;
+}
+
 #logo{
     float: right;
     background-image: url("Images/logo_2.png");
-    margin-right: 19%;
+    margin-right: 19.5%;
     width: 300px;
     height: 300px;
 }
@@ -25,21 +33,21 @@
     visibility: hidden;
 }
 
-#signUp{
-    margin-left: 68%;
-    margin-right:200px;
-    margin-top: 150px;
-}
 #signIn{
     margin-left: 68%;
     margin-right:200px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
+#signUp{
+    margin-left: 67.75%;
+    margin-right:200px;
+    margin-top: 66.5px;
+}
 
 body,
 html {
-    background-image: url('Images/defaultBG.png');
+    background-image: url('Images/background.gif');
     background-repeat: repeat-y;
     background-size: 50%; 
 }

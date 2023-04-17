@@ -27,6 +27,7 @@ function getUser(){
 }
 
 
+
 window.onload = function(){
     //resets input fields to empty
     document.querySelector('#username').value = "";
