@@ -164,11 +164,11 @@ app.post('/follow', async function (req,res) {
                     console.log("followed friend");
                 });
             }
-            res.sendFile(__dirname + "/home.html");
+            res.sendFile(__dirname + "/friends.html");
         }
         else{
             console.log("user does not exist");
-            res.sendFile(__dirname + "/home.html");
+            res.sendFile(__dirname + "/friends.html");
             notifier.notify({
                 title: "Wave",
                 message: "User does not exist",
