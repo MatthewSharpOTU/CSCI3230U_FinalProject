@@ -11,11 +11,10 @@ function getUser(){
     username = document.querySelector('#username').value;
     password = document.querySelector('#password').value;
 
-    console.log(username);
-    console.log(password);
     //calls login function to check if user and password match records
     //login(username,password);
-    signIn(username,password);
+    //signIn(username,password);
+    /*
     if (accountFound=true){
         curUser = username;
         document.location.href = "home.html";
@@ -24,7 +23,9 @@ function getUser(){
     else{
        document.querySelector("#error").style.visibility = "visible";
     }
+    */
 }
+
 
 
 window.onload = function(){

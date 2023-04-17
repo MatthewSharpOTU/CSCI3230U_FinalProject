@@ -1,0 +1,111 @@
+body,
+html {
+    background-image: url('Images/background.gif');
+}
+
+#page{
+    display:flex;
+}
+
+#list{
+    margin-left:5%;
+    width: 225px;
+    height: 100vh;
+    outline: 3px solid white;
+    background: rgb(191, 64, 191,0.5);
+    overflow-y: auto;
+    text-align: center;
+}
+button{
+    display:block;
+    margin-top: 35px;
+    width: 150px;
+    margin-left:15%;
+    opacity: 1.0;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+#profile{
+    margin-left: 8%;
+    width:700px;
+    height:100vh;
+    border: 2px solid black;
+    background:rgb(0, 0, 0,0.5);
+}
+
+#header{
+    margin-top:250px;
+    font-size: 30px;
+    font-weight: 100;
+    margin-left: 28%;
+    color: #ce2eff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,2px 2px 0px white;
+}
+
+#profilePic{
+    background-image: url("Images/defaultProfile_150x150.png");
+    border-radius: 50%;
+    height:150px;
+    width:150px;
+    
+    
+    background-color: white;
+}
+
+#addUser{
+    margin-top:15px;
+    margin-left:16%;
+    width: 300px;
+}
+
+#addButton{
+    margin-left:33%;
+}
+
+#profileContents{
+    visibility: hidden;
+}
+
+#profileContents,
+input{
+    width:300px;
+    margin:auto;
+    display:block;
+    text-align:center;
+}
+
+#profileUser{
+    color: #ce2eff;
+    text-shadow: 2px 2px 0px white;
+    font-size: 45px;
+    margin-top:30px
+}
+
+#profileBioLabel{
+    color: #ce2eff;
+    text-shadow: 2px 2px 0px white;
+    font-size: 25px;
+    margin-top:15px;
+
+}
+
+#profileBio{
+    resize: none;
+    text-align: center;
+}
+
+#profileSongLabel{
+    color: #ce2eff;
+    text-shadow: 2px 2px 0px white;
+    font-size: 25px;
+    margin-top:25px
+
+}
+
+#profileQuizLabel{
+    color: #ce2eff;
+    text-shadow: 2px 2px 0px white;
+    font-size: 25px;
+    margin-top:25px
+}

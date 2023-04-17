@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <script language="JavaScript" type="text/JavaScript" src="Scripts/friends.js"></script>
+    <link rel="stylesheet" href="Styling/friends.css">
+    <!-- reference your source code here -->
+</head>
+  <body>
+      <div id="page">
+        <div class="btn-group-vertical" id="list"></div>
+        <div id="profile">
+          <div id="profileContents">
+            <p id="profileUser">bkbkbk</p>
+            <img id="profilePic">
+            <p class="label" id="profileBioLabel">Bio:</p>
+            <textarea class="textarea is-link"id="profileBio" readonly placeholder="a"></textarea>
+            <p class="label" id="profileSongLabel">Last Song Played:</p>
+            <input class="input" id="profileLastSong" type="text" readonly placeholder="last song">
+            <p class="label" id="profileQuizLabel">Average Quiz Score:</p>
+            <input class="input" id="profileQuizScore" type="text" readonly placeholder="quiz score">
+          </div>
+        </div>
+        <div id = "addUserForm">
+          <p id="header">Search for Users</p>
+          <form method="post" action="/follow">
+            <input id="addUser" name="addUser" class="input is-link" type="text" required placeholder="Follow User">
+            <button id="addButton" type="submit" title = "Add User" value="Add User" class="button is-link is-light is-rounded is-focused">Add User</button>
+          </form>
+        </div>
+      </div>
+  </body>
+</html>

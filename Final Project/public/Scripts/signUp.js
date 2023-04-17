@@ -1,7 +1,4 @@
 //global variables
-const {MongoClient} = require('mongodb');
-const uri = "mongodb+srv://wave:Password@wave-accounts.kvwuqek.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri);
 var curUser;
 var userFree=false;
 var emailFree=false;
@@ -21,7 +18,7 @@ function getNewUser(){
     
 
     //check database (or whatever data structure) for conflicting emails and usernames
-    checkDatabase(email,username);
+    //checkDatabase(email,username);
 
     //show error if conflict (bulma framework for p)
     if (userFree==false || emailFree==false||password.length<8){
