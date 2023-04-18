@@ -106,6 +106,22 @@ window.onload = function() {
     button.setAttribute('onclick', 'location.href = "statsPage.html"');
     div.appendChild(button);
 
+    br = document.createElement("br");
+    div.appendChild(br);
+    br = document.createElement("br");
+    div.appendChild(br);
+    br = document.createElement("br");
+    div.appendChild(br);
+    br = document.createElement("br");
+    div.appendChild(br);
+
+    button = document.createElement("button");
+    button.className = "button is-warning is-rounded";
+    button.id = "reset";
+    button.innerHTML = "Start/Reset Stat Tracking";
+    button.setAttribute('onclick', 'resetFunc()');
+    div.appendChild(button);
+
     divCol.appendChild(div);
     //divHero.appendChild(divCol);
 
@@ -136,13 +152,7 @@ window.onload = function() {
     //     console.log(error);
     //   });
 
-    if (x == false) {        
-      // Requiring fs module
-      const fs = require("fs");
-        
-      // Storing the JSON format data in myObject
-      var data = fs.readFileSync("practice/data.json");
-      var myObject = JSON.parse(data);
+    if (x == false) {       
         
       // Defining new data to be added
       let newData = {
@@ -179,17 +189,12 @@ window.onload = function() {
               }
           ]
       };
-        
-      // Adding the new data to our object
-      myObject.push(newData);
-        
-      // Writing to our JSON file
-      var newData2 = JSON.stringify(myObject);
-      fs.writeFile("practice/data.json", newData2, (err) => {
-        // Error checking
-        if (err) throw err;
-        console.log("New data added");
-      });
 
   }
+}
+
+function resetFunc(){
+    window.localStorage.setItem("stats", "-1,-1,-1,-1,-1,-1,-1");
+    console.log(window.localStorage.getItem("stats"));
+    alert("Stats have been Reset");
 }

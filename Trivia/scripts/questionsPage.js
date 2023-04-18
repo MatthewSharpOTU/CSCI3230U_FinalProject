@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 let questions = undefined;
+var qID = undefined;
+
+
 fetch('questions.json')
       .then((resp) => resp.json())
       .then(function (data) {
@@ -30,6 +33,7 @@ fetch('questions.json')
                 element.category.forEach((e) => {
                     if (e.topic == window.localStorage.getItem("trivia")){
                         questions = e.questions;
+                        qID = e.id;
                         console.log(questions[1].Q);
                     }
                 });
@@ -138,8 +142,19 @@ $(document).ready(function(){
             count++;
         }
         console.log(count);
-        alert("Your Score For The "+window.localStorage.getItem("trivia")+" quiz is: "+count+"/5");
-        window.localStorage.setItem("score", count);
+        let scores = window.localStorage.getItem("stats").split(",");
+        scores.forEach((e) => {
+            console.log(e);
+        });
+        if (scores[qID-1] == -1){
+            //console.log(qID);
+            scores[qID-1] = count;
+            console.log(scores);
+            window.localStorage.setItem("stats", scores);
+            alert("Your Score For The "+window.localStorage.getItem("trivia")+" quiz is: "+count+"/5");  
+        } else {
+            alert("You have taken this quiz already, redirecting you to trivia home page");  
+        }
         location.href = "triviaPage.html";
     });
   });
