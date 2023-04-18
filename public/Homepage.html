@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave</title>
+    <!-- reference your stylesheet here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="Styling/Homepage.css">
+    <!-- reference your source code here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.1/d3.min.js" 
+        integrity="sha512-EJphfO0pq9xyT3qaHte1zam2S9a1PZ76oHBjayziMT+2lw/Y0NhkSVHS2rfl3t4UX/eyq/D6f9d2sjA6K9t/Kg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src = "Scripts/homepage.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-light" style="background-color: pink;" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            
+            <img src="Styling/Images/logo-1.png" alt="Project Logo" width="50" height="50">
+
+            
+
+            <!-- <a class="navbar-item">Welcome to Wave</a> -->
+
+            <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> 
+        </div>
+
+        <div class="navbar-menu" id="navbarExampleTransparentExample"> 
+            <div class="navbar-start">
+
+                <a class="navbar-item" href="Profile.html">
+                    Profile
+                </a>
+
+                <a class="navbar-item" href="Homepage.html">
+                    Home
+                </a>
+                
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Browse
+                    </a>
+                    
+                    <div class="navbar-dropdown">
+    
+                        <a class="navbar-item" href = "browse.html">
+                            Search
+                        </a>
+    
+                        <a class="navbar-item" href="songs.html">
+                            Songs
+                        </a>
+    
+                        <a class="navbar-item" href="genre.html">
+                            Genres
+                        </a>
+    
+                    </div>
+                </div>
+                
+
+                <a class="navbar-item">
+                    Playlists
+                </a>
+                
+                <a class="navbar-item" href="triviaPage.html">
+                    Trivia
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero is-fullheight has-background">
+        <img class="hero-background is-transparent" src="Styling/Images/cloudy_sky.jpg" />
+        <div class="hero-body">
+            <div class="container">
+                <svg id="top-line" height="300" width="1000"></svg>
+                <div class="title">
+                    You Are Now Listening To Wave
+                 </div>
+                <div class="subtitle">
+                    Listen - Connect - Learn
+                </div>
+            </div>
+            
+            <button title = "Take a quiz about your favourite artists" class="button is-danger is-rounded" id="top-left" onclick="location.href='triviaPage.html'">Test Your Knowledge</button>
+            <button title = "Listen to the songs you want to" class="button is-danger is-rounded" id="top-mid-left" onclick="location.href=''">Listen Now</button>
+            <button title = "Browse our vast catalog of artists and albums" class="button is-danger is-rounded" id="bottom-left" onclick="location.href='browse.html'">Discover Your Sounds</button>
+            <button title = "Edit your preferences and presentation" class="button is-danger is-rounded" id="bottom-mid-left" onclick="location.href='Profile.html'">Customize Your Profile</button>
+        </div>
+    </div>
+
+    
+
+      
+
+</body>

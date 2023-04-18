@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="Styling/Profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <script type="text/javascript" src="Scripts/spreadsheet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <audio id="audio-player" src=""></audio>
+    <div class="primary-container">
+      <div class="side-bar">
+        <h1>Playlists</h1>
+        <div class="playlists">
+          <h4 class="playlist"><span></span>Playlist #1</h4>
+          <h4 class="playlist"><span></span>Playlist #2</h4>
+          <h4 class="playlist"><span></span>Playlist #3</h4>
+        </div>
+        <div class="songs">
+        </div>
+        <div class="playlist-options">
+          <i class="fas fa-edit" id="edit"></i>
+          <i class="fas fa-trash delete" id="delete"></i>
+          <i class="fas fa-plus" id="playlist-add"></i>
+        </div>
+      </div>
+
+      <img src="Styling/Images/logo-1.png" class="logo"> 
+
+      <div class="profile-container">
+        <div class="points-display">
+          <img src="Styling/Images/points.png" class="points-icon">
+          <h2 id="pointsNum"></h2>
+        </div>
+
+        <i class="fas fa-user-edit" id="edit-user"></i>
+        <i class="fas fa-users" id="friends"></i>
+        <i class="fas fa-cog" id="settings"></i>
+
+        <div class="intro">
+          <h2 id="user-name" contenteditable="false"></h2>        
+          <img id="profile-icon"src="Styling/Images/profile.png" class="profile-icon">
+          <h2 id="user-motto" contenteditable="false"></h2>
+        </div>
+
+        <div class="user-statistics">
+          <div class="trivia-rankings">
+            <h2>Trivia Rankings</h2>
+            <ol id="triviaRanks">
+            </ol>
+          </div>
+          <div class="fanatic-score">
+            <h2>Fanatic Score</h2>
+            <ol id="fanaticScore">
+            </ol>
+          </div> 
+        </div>
+
+        <h2 id="bio-header" class="bio-header"></h2>
+
+        <div class="profile-bio">
+          <p id="user-bio" contenteditable="false"></p>
+        </div> 
+      </div>
+
+      <div class="music-player">
+        <div class="song-bar">
+          <div class="song-info">
+            <div class="song-image">
+            </div>
+            <div class="song-description">
+              <p class="title"></p>
+              <p class="artist"></p>
+            </div>
+          </div>
+
+          <div class="icons">
+            <i class="fas fa-plus" id="add-song"><var id="song-id" value="4"></var></i>
+          </div>
+        </div>
+
+        <div class="player-control">
+          <div class="controls">
+            <div><i class="fas fa-random" id="shuffle-button"></i></div>
+            <div><i class="fas fa-step-backward" id="backward-button"></i></div>
+            <div><i class="fas fa-play" id="play-button"></i></div>
+            <div><i class="fas fa-step-forward" id="forward-button"></i></div>
+            <div><i class="fas fa-undo-alt" id="repeat-button"></i></div>
+          </div>
+
+          <div class="duration-container">
+            <span class="current-time">00:00</span>
+              <input title = "0"type="range" value="0" class="slider" id="song-progress">
+            <span class="song-duration">00:00</span>
+          </div>
+        </div>
+        <div class="volume-bar">
+          <i class="fas fa-volume-up" id="volume-icon"></i>
+          <input title = "0" type="range" value="0" class="slider" id="volume">
+        </div>
+      </div>
+    <script src="data.js"></script>
+    <script src="Scripts/Profile.js"></script>
+  </body>
+</html>
