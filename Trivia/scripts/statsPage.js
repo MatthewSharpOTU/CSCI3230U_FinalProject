@@ -20,7 +20,32 @@ document.addEventListener('DOMContentLoaded', () => {
   
 });
 
+var scoreData = [
+    {"score": 0, "total": 0},
+    {"score": 1, "total": 0},
+    {"score": 2, "total": 0},
+    {"score": 3, "total": 0},
+    {"score": 4, "total": 0},
+    {"score": 5, "total": 0},
+];
+var total = 0;
+var sum = 0;
+
 window.onload = function() {
+
+    let scores = window.localStorage.getItem("stats").split(",");
+        scores.forEach((e) => {
+            scoreData.forEach((ele) => {
+                if (ele.score == e) {
+                    ele.total++;
+                    total = total + 5;
+                    sum = sum + ele.score;
+                }
+            });
+        });
+
+    console.log(scoreData);
+
     divHero = document.getElementById("hero");
     let img = document.createElement("img");
     img.className = "hero-background is-transparent";
@@ -34,18 +59,16 @@ window.onload = function() {
     let br = document.createElement("br");
     div.appendChild(br);
 
-    let h1 = document.createElement("h1");
-    h1.innerHTML = "*UserName*'s Stats: ";
-    h1.id = "stats"
-    div.appendChild(h1);
-
     br = document.createElement("br");
     div.appendChild(br);
     br = document.createElement("br");
     div.appendChild(br);
 
     h1 = document.createElement("h1");
-    h1.innerHTML = "*UserName*'s Question Accuracy (%): ";
+    let percent = sum/total;
+    console.log(total);
+    console.log(sum);
+    h1.innerHTML = "User's Question Accuracy (%): "+(sum/total);
     h1.id = "accuracy";
     div.appendChild(h1);
 
@@ -68,17 +91,17 @@ window.onload = function() {
     const chartHeight = height - 2 * margin;
 
     const colourScale = d3.scaleLinear()
-                            .domain([978, 2188])
+                            .domain([0, 10])
                             .range(['black', 'black']);
     
     // scaleBand is used with ordinal (categorical data)
     const xScale = d3.scaleBand() // discrete, bucket
-                        .domain(salesData.map((data) => data.year))
+                        .domain(scoreData.map((data) => data.score))
                         .range([0, chartWidth])
                         .padding(0.3);
     
     const yScale = d3.scaleLinear()
-                        .domain([0, 2200])
+                        .domain([0, 10])
                         .range([chartHeight, 0]);
 
     let svg = d3.select('#midDiv')
@@ -91,7 +114,23 @@ window.onload = function() {
             .attr('x', width / 2)
             .attr('y', margin)
             .attr('text-anchor', 'middle')
-            .text('Sales by Year');
+            .text('Total Scores of Quizzes');
+
+    svg.append('text')
+            .attr("class", "x label")
+            .attr('x', width/2-10)
+            .attr('y', height-10)
+            .attr('text-acnchor', 'middle')
+            .text('Quiz Scores');
+
+    svg.append('text')
+            .attr("class", "y label")
+            .attr('x', -width/3)
+            .attr('y', 10)
+            .attr('dy', ".75em")
+            .attr('transform', 'rotate(-90)')
+            .attr('text-acnchor', 'end')
+            .text('Quiz Count');
 
     
     // create a group (g) for the bars
@@ -118,14 +157,14 @@ window.onload = function() {
     // a rectangle. 
     // Arrow functions get data passed to them, and we map that to our xScale values
     let rectangles = g.selectAll('rect')
-        .data(salesData)
+        .data(scoreData)
         .enter()
             .append('rect')
-                .attr('x', (data) => xScale(data.year))
+                .attr('x', (data) => xScale(data.score))
                 .attr('y', (data) => chartHeight)
                 .attr('width', xScale.bandwidth())
                 .attr('height', (data) => 0)
-                .attr('fill', (data) => colourScale(data.sales))
+                .attr('fill', (data) => colourScale(data.total))
                 .on('mouseenter', function(source, index) {
                     d3.select(this)
                         .transition()
@@ -141,8 +180,8 @@ window.onload = function() {
     
     rectangles.transition()
         .ease(d3.easeElastic)
-        .attr('height', (data) => chartHeight - yScale(data.sales))
-        .attr('y', (data) => yScale(data.sales))
+        .attr('height', (data) => chartHeight - yScale(data.total))
+        .attr('y', (data) => yScale(data.total))
         .duration(1000)
         .delay((data, index) => index * 50);
 
