@@ -26,3 +26,9 @@ and this will route you to our websites login page. From here you can then creat
 new account or log into a preexisting account that you can then browse the functionalities
 of our website. These include customizing playlists, user profile settings, listening to our
 catalog of songs and testing your knowledge with quizzes cattering to certain genres or artists.
+
+Admin account:
+Username: Wave
+Password: Password
+
+All available accounts are listed in the accounts_info.json file if needed.
