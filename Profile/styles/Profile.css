@@ -27,7 +27,6 @@
 
 .logo:hover{
     background-color: #f53192;
-    
 }
 
 /* profile contents */
@@ -312,7 +311,7 @@ i:hover{
 .controls div:nth-child(3){
     transform: scale(1.5);
     background: #f53192;
-    color: #fff;
+    color: white;
 }
 
 .controls div i{
