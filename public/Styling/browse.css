@@ -1,3 +1,10 @@
+/*
+Sources used with css styling:
+https://www.w3schools.com/css/
+https://bulma.io/documentation/
+https://codepen.io/leonidboykov/pen/Edvvpm
+*/
+
 body{
     background-color: plum;
     min-width: 50%;
@@ -61,13 +68,10 @@ body{
 }
 
 #welcome{
-    font-size: 32px;
+    font-size: xx-large;
     color: black;
     font-weight: 500;
     margin-left: 10%;
-    max-width: 150px;
-    margin-right:10%;
-    text-align: right;
     animation: fadeIn 4s;
     animation-timing-function: linear;
 }
