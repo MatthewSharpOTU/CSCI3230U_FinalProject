@@ -1,0 +1,7 @@
+For the most part of the project we collaborated together
+and worked on the project equally. For specific
+parts we worked on they are listed below.
+
+Garry Masaun - Profile page elements, music player UI & functionality, playlists UI and functionality, profile editing.
+Matthew Sharp - HomePage and Bulma Navigation, Trivia Page Functionality, Quizzes, Stat Tracking, Browsing Songs Functionality
+Jaelen Wright - Sign in and Sign up, Settings page, Follow List page, Account information and accessing it on the database, computer notifications

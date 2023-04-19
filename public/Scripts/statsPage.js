@@ -30,6 +30,7 @@ var scoreData = [
 ];
 var total = 0;
 var sum = 0;
+var username;
 
 function getScores(){
     var data = {username: "",
@@ -41,6 +42,7 @@ function getScores(){
     .then(function(data) {
         console.log(data);
         //use data.username to set username wherever needed
+        username = data.username;
         return data.quizzes.split(",");
     })
     .catch(function(error){
@@ -86,7 +88,7 @@ window.onload = async function() {
     let percent = sum/total;
     console.log(total);
     console.log(sum);
-    h1.innerHTML = "User's Question Accuracy (%): "+(sum/total);
+    h1.innerHTML = username+"'s Question Accuracy (%): "+(sum/total);
     h1.id = "accuracy";
     div.appendChild(h1);
 

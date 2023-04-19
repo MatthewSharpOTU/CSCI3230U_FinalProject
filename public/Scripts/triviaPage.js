@@ -68,7 +68,7 @@ window.onload = async function() {
     div.appendChild(br);
 
     let a = document.createElement("a");
-    a.innerHTML = "Test Your Knowledge With Our Quizzes";
+    a.innerHTML = "Test Your Knowledge In Quizzes";
     a.id="welcome";
     div.appendChild(a);
 

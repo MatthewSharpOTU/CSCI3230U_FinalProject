@@ -61,10 +61,13 @@ body{
 }
 
 #welcome{
-    font-size: xx-large;
+    font-size: 32px;
     color: black;
     font-weight: 500;
     margin-left: 10%;
+    max-width: 150px;
+    margin-right:10%;
+    text-align: right;
     animation: fadeIn 4s;
     animation-timing-function: linear;
 }

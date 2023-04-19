@@ -91,7 +91,7 @@ window.onload = function() {
   div.appendChild(br);
 
   let a = document.createElement("a");
-  a.innerHTML = "Browse Through Our Catalog Of Songs";
+  a.innerHTML = "Browse Our Catalog Of Songs";
   a.id = "welcome";
   div.appendChild(a);
 

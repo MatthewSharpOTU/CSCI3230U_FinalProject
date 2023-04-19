@@ -29,7 +29,7 @@ var quizNum = undefined;
 
 let oldCard = undefined;
 var count = 0;
-
+let scores = undefined;
 window.onload = async function() {
     console.log(window.localStorage.getItem("trivia"));
     let h1 = document.getElementById("Header");
@@ -58,6 +58,8 @@ window.onload = async function() {
     .catch(function(error) {
       console.log(error);
     });
+
+    scores = await getScores();
 
     const app = Vue.createApp({
     // Shorthand syntax for data: function() {}
@@ -185,7 +187,6 @@ $(document).ready(function(){
         }
         console.log(count);
         //let scores = window.localStorage.getItem("stats").split(",");
-        let scores = getScores();
         scores.forEach((e) => {
             console.log(e);
         });
@@ -193,7 +194,7 @@ $(document).ready(function(){
             //console.log(qID);
             scores[qID-1] = count;
             console.log(scores);
-            updateScores(scores);
+            updateScores(scores.toString());
             window.localStorage.setItem("stats", scores);
             alert("Your Score For The "+window.localStorage.getItem("trivia")+" quiz is: "+count+"/5");  
         } else {
