@@ -16,13 +16,17 @@ const volumeIcon = document.getElementById("volume-icon");
 const shuffle = document.getElementById("shuffle-button");
 const repeat = document.getElementById("repeat-button");
 const addSong = document.getElementById("add-song");
-let createPlaylist = document.getElementById("playlist-add");
+const createPlaylist = document.getElementById("playlist-add");
+const userSettings = document.getElementById("settings");
+const friends = document.getElementById("friends");
 
 //Initialize player variables
 let isPlaying = false;
-let currentSong = 0;
+let currentSong = parseInt(playlists[0].tracks[0]);
+let selectedIndex = 0;
+let selectedPlaylist = playlists[0].tracks;
 volume.value = 100;
-shuffleStatus = false;
+let shuffleStatus = false;
 
 //Play selected song
 function playSong(i){
@@ -40,7 +44,7 @@ function playSong(i){
   }, 300);
 }
 //initialize player
-playSong(0);
+playSong(currentSong);
 
 //Add new song's UI elements to selected playlist
 function addToPlaylist(x, y){
@@ -120,7 +124,6 @@ progress.onchange = function(){
 //Update volume level when volume slider is changed
 volume.onchange = function(){
   audio.volume = volume.value/100;
-  console.log(volume.value);
   if(volume.value < 50){
     volumeIcon.classList.add("fa-volume-down");
     volumeIcon.classList.remove("fa-volume-up");
@@ -135,10 +138,19 @@ homeButton.addEventListener("click", () =>{
   location.href = 'Homepage.html';
 });
 
+userSettings.addEventListener("click", () =>{
+  location.href = 'accountSettings.html';
+});
+
+friends.addEventListener("click", () =>{
+  location.href = 'friends.html';
+});
+
 //Enable or disable shuffle feature
 shuffle.addEventListener("click", ()=>{
   if(shuffleStatus === false){
     shuffleStatus = true;
+    console.log(shuffleStatus);
     $("#shuffle-button").css("color", "#f53192");
   }else{
     shuffleStatus = false;
@@ -172,11 +184,9 @@ document.querySelectorAll('.playlist').forEach(item => {
     if(add===true){
       for(var z in playlists){
         if(playlists[z].name === item.textContent){
-          console.log(z);
           playlists[z].tracks.push(selectedSong);
 
           if(z === currentPlaylist){
-            console.log(z);
             addToPlaylist(selectedSong, playlists[z].tracks.length);
           }
         }
@@ -187,7 +197,7 @@ document.querySelectorAll('.playlist').forEach(item => {
       for(var i in playlists){
         if(playlists[i].name === item.textContent){
             currentPlaylist = i;
-            console.log(i);
+            selectedPlaylist = playlists[i].tracks;
             for(var j=0; j<playlists[i].tracks.length; j++){
               addToPlaylist(playlists[i].tracks[j], j+1);
             }
@@ -208,30 +218,35 @@ createPlaylist.addEventListener("click",() => {
   newPlaylist.classList.add('playlist');
   newPlaylist.innerHTML = `<span></span>Playlist #${playlists.length}`;
   document.getElementsByClassName("playlists")[0].appendChild(newPlaylist);
-  console.log(playlists);
 })
 
 //Go to previous track
 backButton.addEventListener("click",() => {
-  if(currentSong <= 0){
-   currentSong = songs.length - 1;
+  if(selectedIndex <= 0){
+    selectedIndex = selectedPlaylist.length - 1;
+    currentSong = selectedPlaylist[selectedIndex];
   }else{
-   currentSong--;
+    selectedIndex--
+    currentSong = parseInt(selectedPlaylist[selectedIndex]);
   }
   playSong(currentSong);
   audio.play;
  });
 
  //Go to next track
+
 forwardButton.addEventListener("click", () => {
-  if(currentSong >= songs.length - 1){
-    currentSong = 0;
-  if(shuffleStatus === true){
-    currentSong = Math.random() * 4;
-    console.log()
+  if(selectedIndex >= selectedPlaylist.length - 1){
+    selectedIndex = 0;
+    currentSong = parseInt(selectedPlaylist[selectedIndex]);
   }
+  if(shuffleStatus === true){
+    selectedIndex = Math.floor(Math.random() * selectedPlaylist.length);
+    currentSong = parseInt(selectedPlaylist[selectedIndex]);
+    console.log(currentSong);
   }else{
-    currentSong++;
+    selectedIndex++
+    currentSong = parseInt(selectedPlaylist[selectedIndex]);
   }
   playSong(currentSong);
   audio.play;
@@ -239,7 +254,13 @@ forwardButton.addEventListener("click", () => {
 
 //Play next song when current song ends
 audio.addEventListener('ended', function(){
-  currentSong++;
+  if(shuffleStatus === true){
+    selectedIndex = Math.floor(Math.random() * selectedPlaylist.length);
+    currentSong = parseInt(selectedPlaylist[selectedIndex]);
+  }else{
+    selectedIndex++
+    currentSong = parseInt(selectedPlaylist[selectedIndex]);
+  }
   playSong(currentSong);
   audio.play;
 });
@@ -253,7 +274,7 @@ edit.addEventListener("click", () => {
     document.querySelector(".playlists").children.item(currentPlaylist).innerHTML = `<span></span>${newName}`;
     playlists[currentPlaylist].name = newName;
   }
-})
+});
 
 //Delete selected playlist
 const deletePlaylist = document.getElementById("delete");
@@ -264,9 +285,9 @@ deletePlaylist.addEventListener("click", () => {
 });
 
 //Play selected song in playlist
-playSong = document.querySelectorAll(".play_now").forEach(playSong => {
-  playSong.addEventListener("click", ()=>{
-    currentSong = parseInt(playSong.getAttribute("id"));
+playlistSong = document.querySelectorAll(".play_now").forEach(s => {
+  s.addEventListener("click", ()=>{
+    currentSong = parseInt(s.getAttribute("id"));
     playSong(currentSong);
     audio.play;
   })
@@ -290,15 +311,8 @@ editUser.addEventListener("click", () => {
     editUser.classList.add("fa-user-edit");
   }
 })
-//go to settings page
-document.querySelector("#settings").addEventListener("click",()=>{
-  location.href = 'accountSettings.html';
-});
-//go to following page
-document.querySelector("#friends").addEventListener("click",()=>{
-  location.href = 'friends.html';
-});
 
+//save profile
 function saveProfile(){
   //send user info
   fetch('/updateProfile',{
@@ -323,6 +337,7 @@ function saveProfile(){
       console.log(error);
   })
 }
+
 //sets profile picture
 function setPFP(profile){
   if (profile==1){
@@ -333,6 +348,7 @@ function setPFP(profile){
       document.querySelector("#profile-icon").src = "Styling/Images/profile3.jpg";
   }
 }
+
 //sets background for page
 function setBG(choice){
   if (choice==1){
@@ -343,6 +359,7 @@ function setBG(choice){
       document.getElementsByClassName("primary-container")[0].style.backgroundImage = "url('Styling/Images/background3.gif')";
   }
 }
+
 //sets profile values
 function setProfile(data){
   //set bg
@@ -357,7 +374,8 @@ function setProfile(data){
   //set profile pic
   setPFP(data.profile);
 
-  
+
+  //set fanatic score
   var fanaticScore = data.fanaticScore.split(",");  
   for (var i=0;i<fanaticScore.length;i++){
     var item = document.createElement("li");
@@ -396,5 +414,6 @@ function getProfile(){
 }
 
 window.onload = function(){
+  document.body.style.MozTransform = "67%";
   getProfile();
 }

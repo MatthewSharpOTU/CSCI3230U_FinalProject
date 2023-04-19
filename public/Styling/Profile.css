@@ -27,7 +27,6 @@
 
 .logo:hover{
     background-color: #f53192;
-    
 }
 
 /* profile contents */
@@ -47,6 +46,10 @@
 .profile-container h3{
     font-size: 22px;
     font-weight: 500;
+}
+
+#user-name{
+    margin-left: 5%;
 }
 
 .profile-icon{
@@ -95,7 +98,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 8%;
 }
 
 .intro h2{
@@ -192,7 +194,6 @@
     margin-top: 25px;
     background-color: white;
     color: black;
-    width:-moz-fit-content;
     width: fit-content;
     align-items: center;
     border-radius: 5px;
@@ -314,7 +315,7 @@ i:hover{
 .controls div:nth-child(3){
     transform: scale(1.5);
     background: #f53192;
-    color: #fff;
+    color: white;
 }
 
 .controls div i{
@@ -346,7 +347,6 @@ i:hover{
     cursor: pointer;
     margin: 10px 0;
     -webkit-appearance: none;
-    appearance: none;
 }
 
 .slider::-webkit-slider-thumb{
