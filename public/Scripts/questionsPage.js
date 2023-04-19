@@ -23,31 +23,14 @@ let questions = undefined;
 var qID = undefined;
 var quizNum = undefined;
 
-fetch('questions.json')
-      .then((resp) => resp.json())
-      .then(function (data) {
-        data.forEach((element) => {
-            console.log(element.type);
-            console.log(window.localStorage.getItem("type"));
-            if (element.type == window.localStorage.getItem("type")){
-                element.category.forEach((e) => {
-                    if (e.topic == window.localStorage.getItem("trivia")){
-                        questions = e.questions;
-                        qID = e.id;
-                        console.log(questions[1].Q);
-                    }
-                });
-            }
-        });
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+
+
+
 
 let oldCard = undefined;
 var count = 0;
 
-window.onload = function() {
+window.onload = async function() {
     console.log(window.localStorage.getItem("trivia"));
     let h1 = document.getElementById("Header");
     h1.innerHTML = window.localStorage.getItem("trivia") + " Quiz - Good Luck :)";
@@ -55,6 +38,26 @@ window.onload = function() {
     let h2 = document.getElementById("subheader");
     h2.innerHTML = "Do Not Include Option Letter In Answer"
 
+    await fetch('../questions.json')
+    .then((resp) => resp.json())
+    .then(function (data) {
+      data.forEach((element) => {
+          console.log(element.type);
+          console.log(window.localStorage.getItem("trivia"));
+          if (element.type == window.localStorage.getItem("type")){
+              element.category.forEach((e) => {
+                  if (e.topic == window.localStorage.getItem("trivia")){
+                      questions = e.questions;
+                      qID = e.id;
+                      console.log(questions[1].Q);
+                  }
+              });
+          }
+      });
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
 
     const app = Vue.createApp({
     // Shorthand syntax for data: function() {}

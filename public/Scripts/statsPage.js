@@ -48,10 +48,10 @@ function getScores(){
     })
 }
 
-window.onload = function() {
+window.onload = async function() {
 
     //let scores = window.localStorage.getItem("stats").split(",");
-    let scores = getScores();
+    let scores = await getScores();
         scores.forEach((e) => {
             scoreData.forEach((ele) => {
                 if (ele.score == e) {

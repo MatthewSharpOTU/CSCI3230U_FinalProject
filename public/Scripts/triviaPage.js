@@ -23,9 +23,29 @@ document.addEventListener('DOMContentLoaded', () => {
   
 });
 
-let user = "sampleUser";
+async function getScores(){
+    var data = {username: "",
+                quizzes: ""};
+    return fetch('/getTrivia')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data) {
+        console.log(data);
+        //use data.username to set username wherever needed
+        //return data.quizzes.split(",");
+        return data.username;
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+}
 
-window.onload = function() {
+
+window.onload = async function() {
+    let user = getScores();
+    console.log(user);
+
 
     let divHero = document.getElementById("hero");
     let img = document.createElement("img");
@@ -156,7 +176,8 @@ window.onload = function() {
         
       // Defining new data to be added
       let newData = {
-          "user": "newUser",
+          "user": user,
+          //"user": "sampleUser",
           "stats": [
               {
                   "genre": [
