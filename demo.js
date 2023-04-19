@@ -17,9 +17,11 @@ const { sign } = require('crypto');
 let app = express();
 
 var curUser;
-curUser = "user3";
+//test case variable for all pages to avoid signing in each time
+//curUser = "user3";
 var friendsList; 
 
+//start page
 app.listen(3000, () =>{
     console.log("Started page");
 });
@@ -30,17 +32,12 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
+//start from signIn page
 app.get("/", (req,res) =>{
     res.sendFile(__dirname + "/signIn.html");
 }); 
 
-/*
-app.get("/", (req,res) =>{
-    res.sendFile(__dirname + "/accountSettings.html");
-}); 
-*/
-
-
+//swap pages functions
 //switch from signin to signup
 app.post('/makeAccount',(req,res) =>{
     res.sendFile(__dirname + "/signUp.html");
@@ -51,17 +48,18 @@ app.post('/accessAccount',(req,res) =>{
     res.sendFile(__dirname + "/signIn.html");
 });
 
+//functions to interact with database (based on lecture examples)
 //login
 app.post('/home', async function (req,res) {
     try{
         await client.connect();
         var query = {username: req.body.username, password: req.body.password}
-        var result = await client.db("Accounts").collection("Account info").find(query).toArray();
+        var data = await client.db("Accounts").collection("Account info").find(query).toArray();
         
         //account found
-        if (result.length>0){
+        if (data.length>0){
             curUser = req.body.username;
-            friendsList = result[0].follows;
+            friendsList = data[0].follows;
             console.log(curUser);
             res.sendFile(__dirname + "/public/Homepage.html");
         }else{
@@ -113,7 +111,7 @@ app.post('/signup', async function (req,res) {
                 if (err) throw err;
                 console.log("added account");
             });
-            res.sendFile(__dirname + "/Homepage.html");
+            res.sendFile(__dirname + "/public/Homepage.html");
         }
         else{
             res.redirect(__dirname + '/signUp.html');
@@ -123,7 +121,7 @@ app.post('/signup', async function (req,res) {
                 console.log("user in use");
                 notifier.notify({
                     title: "Wave",
-                    message: "Username in use",
+                    message: "Username already in use",
                     icon: path.join(__dirname,'logoNotif.png')
                 });
             }else if(emailCheck.length>0){
@@ -131,7 +129,7 @@ app.post('/signup', async function (req,res) {
                 console.log("email in use");
                 notifier.notify({
                     title: "Wave",
-                    message: "Email in use",
+                    message: "Email already in use",
                     icon: path.join(__dirname,'logoNotif.png')
                 });
             }
@@ -150,8 +148,8 @@ app.post('/follow', async function (req,res) {
     try{
         await client.connect();
         //check if user exists
-        var query1 = {username: req.body.addUser};
-        var userCheck = await client.db("Accounts").collection("Account info").find(query1).toArray();
+        var query = {username: req.body.addUser};
+        var userCheck = await client.db("Accounts").collection("Account info").find(query).toArray();
         //add user
         if (userCheck.length>0){
             if(friendsList.split(",").includes(req.body.addUser)){
@@ -286,17 +284,17 @@ app.post('/updateAccount', async function (req,res) {
 });
 
 
-//fetch get and post functions
+//fetch get and post functions (examples from lectures used)
 
 //get following list for current user
 app.get('/following', async function(req,res){
     try{
         await client.connect();
         var query = {username: curUser}
-        var result = await client.db("Accounts").collection("Account info").find(query).toArray();
+        var data = await client.db("Accounts").collection("Account info").find(query).toArray();
         
         //got friendsList
-        friendsList = result[0].follows;
+        friendsList = data[0].follows;
         res.send({
             follows: friendsList
         });
@@ -313,11 +311,11 @@ app.get('/getTrivia', async function(req,res){
     try{
         await client.connect();
         var query = {username: curUser}
-        var result = await client.db("Accounts").collection("Account info").find(query).toArray();
+        var data = await client.db("Accounts").collection("Account info").find(query).toArray();
 
         res.send({
-            username: result[0].username,
-            quizzes: result[0].quizzes
+            username: data[0].username,
+            quizzes: data[0].quizzes
         });
     }catch(e){
         console.log(e);
@@ -332,11 +330,11 @@ app.get('/bgAndpfp', async function(req,res){
     try{
         await client.connect();
         var query = {username: curUser}
-        var result = await client.db("Accounts").collection("Account info").find(query).toArray();
+        var data = await client.db("Accounts").collection("Account info").find(query).toArray();
         
         res.send({
-            background: result[0].background,
-            profile: result[0].profile
+            background: data[0].background,
+            profile: data[0].profile
         });
     }catch(e){
         console.log(e);
@@ -453,13 +451,13 @@ app.post('/displayProfile', async function(req,res){
     try{
         await client.connect();
         var query = {username: user}
-        var result = await client.db("Accounts").collection("Account info").find(query).toArray();
+        var data = await client.db("Accounts").collection("Account info").find(query).toArray();
         res.send({
-            username: result[0].username,
-            bio: result[0].bio,
-            lastSong: result[0].lastSong,
-            quizzes: result[0].quizzes,
-            profile: result[0].profile
+            username: data[0].username,
+            bio: data[0].bio,
+            lastSong: data[0].lastSong,
+            quizzes: data[0].quizzes,
+            profile: data[0].profile
         });
         
     }catch(e){
@@ -473,15 +471,15 @@ app.post('/displayProfile', async function(req,res){
 
 
 //get playlist information for user
-app.post('/getPlaylist', async function(req,res){
+app.get('/getPlaylist', async function(req,res){
     var playlists = req.body.playlists;
     //get user info
     try{
         await client.connect();
         var query = {username: curUser}
-        var result = await client.db("Accounts").collection("Account info").find(query).toArray();
+        var data = await client.db("Accounts").collection("Account info").find(query).toArray();
         res.send({
-            playlists: result[0].playlists
+            playlists: data[0].playlists
         });
         
     }catch(e){
@@ -523,18 +521,18 @@ app.get('/getProfile', async function(req,res){
     try{
         await client.connect();
         var query = {username: curUser}
-        var result = await client.db("Accounts").collection("Account info").find(query).toArray();
+        var data = await client.db("Accounts").collection("Account info").find(query).toArray();
         
         //got friendsList
         res.send({
-            display: result[0].display,
-            motto: result[0].motto,
-            triviaRanks: result[0].triviaRanks,
-            fanaticScore: result[0].fanaticScore,
-            bio: result[0].bio,
-            points: result[0].points,
-            background: result[0].background,
-            profile: result[0].profile
+            display: data[0].display,
+            motto: data[0].motto,
+            triviaRanks: data[0].triviaRanks,
+            fanaticScore: data[0].fanaticScore,
+            bio: data[0].bio,
+            points: data[0].points,
+            background: data[0].background,
+            profile: data[0].profile
         });
     }catch(e){
         console.log(e);

@@ -1,5 +1,4 @@
 function bgChange(choice){
-    console.log("ran");
     if (choice==1){
         document.body.style.backgroundImage = "url('Styling/Images/background.gif')";
     }else if (choice==2){
@@ -28,10 +27,9 @@ function bgChange(choice){
         console.log(error);
     })
 }
-
+//updates pfp choice in database
 function pfpChange(choice){
-    //updates pfp choice in database
-    //send user
+    //send update
     fetch('/updatePFP',{
         method: "post",
         headers: {
@@ -51,7 +49,7 @@ function pfpChange(choice){
         console.log(error);
     })
 }
-
+//get user background from database
 function getBackground(){
     var data = {background: "",
                 profile: ""};

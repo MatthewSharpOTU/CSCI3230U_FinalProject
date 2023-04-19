@@ -35,7 +35,7 @@ button{
 }
 
 #header{
-    margin-top:250px;
+    margin-top:200px;
     font-size: 30px;
     font-weight: 100;
     margin-left: 28%;
@@ -51,6 +51,17 @@ button{
     
     
     background-color: white;
+}
+
+
+
+#back{
+    margin-top:75px;
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 28%;
+    color: #ce2eff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,2px 2px 0px white;
 }
 
 #addUser{

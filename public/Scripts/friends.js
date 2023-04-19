@@ -1,5 +1,4 @@
 function buildProfile(account){
-    console.log(account);
     var user = account.username;
     var bio = account.bio;
     var lastSong = account.lastSong;
@@ -58,7 +57,7 @@ function setBG(choice){
 }
 
 function displayProfile(user){
-    //send user
+    //send user request
     fetch('/displayProfile',{
         method: "post",
         headers: {
@@ -76,6 +75,7 @@ function displayProfile(user){
     })
     .then(response => response.json())
     .then(data => {
+        //build profile with returned data
         buildProfile(data);
         
     })
@@ -85,6 +85,7 @@ function displayProfile(user){
 
 }
 
+//add button for each user in following list
 function addButton(value){
     var button = document.createElement("button");
     button.innerText = value;
@@ -95,7 +96,7 @@ function addButton(value){
     document.querySelector("#list").appendChild(button);
 }
 
-
+//gets following list and calls for button to be made for each one
 function displayFollowing(followList){
     following = followList.split(",");
     //following = ["Wave","Jaelen","Matthew","Garry"];
@@ -106,6 +107,7 @@ function displayFollowing(followList){
     }
 }
 
+//get follow list and user background choice
 function getData(){
     var data = {follows: "",
                 background: ""};

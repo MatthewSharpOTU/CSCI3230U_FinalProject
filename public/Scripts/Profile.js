@@ -28,6 +28,25 @@ let selectedPlaylist = playlists[0].tracks;
 volume.value = 100;
 let shuffleStatus = false;
 
+function getPlaylist(){
+  var data = {playlists: ""};
+  return fetch('/getPlaylist')
+  .then(function(response){
+      return response.json();
+  })
+  .then(function(data) {
+      console.log(data);
+      //use data.username to set username wherever needed
+      return JSON.parse(data.playlists);
+  })
+  .catch(function(error){
+      console.log(error);
+  })
+}
+window.onload = async function(){
+  //playlists = await getPlaylist();
+}
+
 //Play selected song
 function playSong(i){
   let song = songs[i];
